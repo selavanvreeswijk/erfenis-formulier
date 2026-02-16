@@ -12,9 +12,33 @@
 /* --------------------------------------------------------------------------------- MARK: GENERAL 
 */
 
+header{
+    color: red;
 
+    display: flex;
+    justify-content: center;
 
+    margin-top: 0.5em;
+}
 
+fieldset{
+    display: flex;
+    flex-direction: column;
+}
 
-/* --------------------------------------------------------------------------------- MARK: GENERAL 
+button{
+    margin: 1em auto;
+    max-width: 8em;
+    padding: 0.2em 0.5em;
+}
+
+.radio{
+    flex-direction: row;
+}
+
+/* --------------------------------------------------------------------------------- MARK: FORMS 
 */
+
+.main-container{
+    margin: 0.5em;
+}
