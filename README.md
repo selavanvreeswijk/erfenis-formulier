@@ -13,14 +13,15 @@ Vanochtend en in een deel van de middag heb ik uitleg gekregen over deze nieuwe 
 ![screenshot huidig werk](/images/prototype-1.png)
 
 ### Dinsdag
-
+Dinsdagochtend ben ik begonnen met een quiz over een artikel dat we hadden gelezen. Daarna had ik een workshop over HTML en daarna ben ik helaas ziek naar huis gegaan met koorts. Ik heb verder niet aan de opdracht kunnen werken omdat ik me niet goed voelde.
 
 
 ### Woensdag
-
+Hier was ik ziek.
 
 
 ### Donderdag 
+Hier was ik ziek.
 
 ### Vrijdag
 
@@ -55,7 +56,11 @@ Vanochtend en in een deel van de middag heb ik uitleg gekregen over deze nieuwe 
 <details><summary>Bronnenlijst</summary>
 
 ## Bronnen
+Pattern: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/pattern
 
+Minlength: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/minlength
+
+Minimale datum: https://www.belastingdienst.nl/wps/wcm/connect/nl/erfbelasting/content/wanneer-moet-mijn-aangifte-erfbelasting-binnen-zijn 
 
 
 </details>
