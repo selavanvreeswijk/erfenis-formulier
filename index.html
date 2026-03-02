@@ -5,16 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Erfenis Formulier</title>
         <link href="./css/styles.css" rel="stylesheet">
-        <!-- <link rel="icon" href="./images/zee.jpg"> Favicon -->
+        <link rel="icon" href="./images/logo-belastingdienst.jpg"> 
     </head>
 
     <body>
         <header>
-            <p>DIT GAAT OM EEN SCHOOLPROJECT</p>
+            <p>DIT IS EEN STUDIEPROJECT</p>
         </header>
 
         <main>
-            <div class="main-container">
+            
                 <section>
                     <h1>Formulier Erfenis</h1>
                     <p>Vul dit formulier in.</p>
@@ -23,23 +23,30 @@
                 <section>
                     <form>
                         <fieldset>
+                            <legend>Persoonsgegevens overledene</legend>
+
                             <fieldset> <!--1a-->
-                                <legend>Persoonsgegevens overledene</legend>
+                                <legend>Gegevens overledene</legend>
 
-                                <label for="naam">Voorletter(s)</label>
-                                <input type="text" name="naam" pattern="[A-Z.]+" required> <!--Bron pattern: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/pattern -->
+                                <label>Voorletter(s)
+                                    <input type="text" name="naam" pattern="[A-Z.]+" required> <!--Bron pattern: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/pattern -->
+                                </label>
 
-                                <label for="naam">Tussenvoegsel(s)</label>
-                                <input type="text" name="naam">
+                                <label>Tussenvoegsel(s)
+                                    <input type="text" name="naam">
+                                </label>
 
-                                <label for="naam">Achternaam</label>
-                                <input type="text" name="naam" required>
+                                <label>Achternaam
+                                    <input type="text" name="naam" required>
+                                </label>
 
-                                <label for="number">BSN overledene</label>
-                                <input type="number" minlength="9" maxlength="9" required> <!--Bron min length: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/minlength-->
+                                <label>BSN overledene
+                                    <input type="number" minlength="9" maxlength="9" required> <!--Bron min length: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/minlength-->
+                                </label>
 
-                                <label for="overlijdensdatum">Overlijdensdatum</label>
-                                <input type="date" name="overlijdensdatum" value="yyyy-mm-dd" min="2024-16-07" max="2026-16-02" required> <!--Bron minimale datum: https://www.belastingdienst.nl/wps/wcm/connect/nl/erfbelasting/content/wanneer-moet-mijn-aangifte-erfbelasting-binnen-zijn-->
+                                <label>Overlijdensdatum
+                                    <input type="date" name="overlijdensdatum" value="yyyy-mm-dd" min="2024-16-07" max="2026-16-02" required> <!--Bron minimale datum: https://www.belastingdienst.nl/wps/wcm/connect/nl/erfbelasting/content/wanneer-moet-mijn-aangifte-erfbelasting-binnen-zijn-->
+                                </label>
                             </fieldset>
 
                             <fieldset> <!--1b-->
@@ -48,65 +55,77 @@
                                 <fieldset class="radio">
                                     <legend>Was de overledene getrouwd of had de overledene een geregistreerde partner op het moment van overlijden?</legend>
                                     
-                                    <label for="getrouwd-ja">Ja</label>
-                                    <input type="radio" value="ja" id="getrouwd-ja" name="getrouwd">
+                                    <label>Ja
+                                        <input type="radio" value="ja" name="getrouwd">
+                                    </label>
 
-                                    <label for="getrouwd-nee">Nee</label> <!--Als je hier op klikt klapt iets nog in-->
-                                    <input type="radio" value="nee" id="getrouwd-nee" name="getrouwd">
+                                    <label>Nee
+                                        <input type="radio" value="nee" name="getrouwd">
+                                    </label> <!--Als je hier op klikt klapt iets nog in-->
                                 </fieldset>
 
                                 <fieldset class="radio"> 
                                     <legend>Hadden de overledene en diens echtgenoot of geregistreerde partner huwelijkse of partnerschapsvoorwaarden laten vastleggen in een notariële akte?</legend>
 
-                                    <label for="getrouwd-ja">Ja</label> <!--Nog dat je een kopie met de aangifte mee moet sturen-->
-                                    <input type="radio" value="ja" id="geregistreerd-partnerschap-ja" name="geregistreerd-partnerschap">
+                                    <label>Ja
+                                        <input type="radio" value="ja" name="geregistreerd-partnerschap">
+                                    </label> <!--Nog dat je een kopie met de aangifte mee moet sturen-->
 
-                                    <label for="getrouwd-nee">Nee</label>
-                                    <input type="radio" value="nee" id="geregistreerd-partnerschap-nee" name="geregistreerd-partnerschap">
+                                    <label>Nee
+                                        <input type="radio" value="nee" name="geregistreerd-partnerschap">
+                                    </label>
                                 </fieldset>
 
                                 <fieldset class="radio">
                                     <legend>Hadden de overledene en diens partner een finaal verrekenbeding?</legend>
 
-                                    <label for="getrouwd-ja">Ja</label> <!--Nog dat je een kopie met de aangifte mee moet sturen-->
-                                    <input type="radio" value="ja" id="finaal-verrekenbeding-ja" name="finaal-verrekenbeding">
+                                    <label>Ja
+                                        <input type="radio" value="ja" name="finaal-verrekenbeding">
+                                    </label> <!--Nog dat je een kopie met de aangifte mee moet sturen-->
 
-                                    <label for="getrouwd-nee">Nee</label>
-                                    <input type="radio" value="nee" id="finaal-verrekenbeding-nee" name="finaal-verrekenbeding">
+                                    <label>Nee
+                                        <input type="radio" value="nee" name="finaal-verrekenbeding">
+                                    </label>
                                 </fieldset>
                             </fieldset>
 
                             <fieldset> <!--1c-->
-                                <legend>Kindere overledene</legend>
+                                <legend>Kinderen overledene</legend>
 
                                 <fieldset class="radio">
                                     <legend>Had de overledene kinderen?</legend>
 
-                                    <label for="kinderen-ja">Ja</label> 
-                                    <input type="radio" value="ja" id="kinderen-ja" name="finaal-verrekenbeding">
+                                    <label>Ja
+                                        <input type="radio" value="ja" name="finaal-verrekenbeding">
+                                    </label> 
 
-                                    <label for="kinderen-nee">Nee</label> <!--Door naar 1d-->
-                                    <input type="radio" value="nee" id="kinderen-nee" name="finaal-verrekenbeding">
+                                    <label>Nee
+                                        <input type="radio" value="nee" name="finaal-verrekenbeding">
+                                    </label> <!--Door naar 1d-->
                                 </fieldset>
 
                                 <fieldset class="radio">
                                     <legend>Is 1 van deze kinderen eerder overleden dan de overledene voor wie u nu aangifte doet?</legend>
 
-                                    <label for="kind-eerder-overleden-ja">Ja</label> 
-                                    <input type="radio" value="ja" id="kinderen-ja" name="kind-eerder-overleden">
+                                    <label>Ja
+                                        <input type="radio" value="ja" name="kind-eerder-overleden">
+                                    </label> 
 
-                                    <label for="kind-eerder-overleden-nee">Nee</label> <!--Door naar 1d-->
-                                    <input type="radio" value="nee" id="kinderen-nee" name="kind-eerder-overleden">
+                                    <label>Nee
+                                        <input type="radio" value="nee" name="kind-eerder-overleden">
+                                    </label> <!--Door naar 1d-->
                                 </fieldset>
 
                                 <fieldset class="radio">
                                     <legend>Had dit overleden kind zelf kinderen?</legend>
 
-                                    <label for="overleden-kind-zelf-kinderen-ja">Ja</label> 
-                                    <input type="radio" value="ja" id="kinderen-ja" name="overleden-kind-zelf-kinderen">
+                                    <label>Ja
+                                        <input type="radio" value="ja" name="overleden-kind-zelf-kinderen">
+                                    </label> 
 
-                                    <label for="overleden-kind-zelf-kinderen-nee">Nee</label> <!--Door naar 1d-->
-                                    <input type="radio" value="nee" id="kinderen-nee" name="overleden-kind-zelf-kinderen">
+                                    <label>Nee
+                                        <input type="radio" value="nee" name="overleden-kind-zelf-kinderen">
+                                    </label> <!--Door naar 1d-->
                                 </fieldset>
                             </fieldset>
 
@@ -116,47 +135,48 @@
                                 <fieldset>
                                     <legend>Had de overledene een testament?</legend>
 
-                                    <label for="testament-ja">Ja</label> 
-                                    <input type="radio" value="ja" id="testament-ja" name="testament">
+                                    <label>Ja
+                                        <input type="radio" value="ja" name="testament">
+                                    </label> 
 
-                                    <label for="testament-nee">Nee</label> 
-                                    <input type="radio" value="nee" id="testament-nee" name="testament">
+                                    <label>Nee
+                                        <input type="radio" value="nee" name="testament">
+                                    </label> 
                                 </fieldset>
 
                                 <fieldset>
                                     <legend>Protocolnummer notaris</legend>
+
                                     <input type="number" minlength="6" maxlength="6" name="protocolnummer-notaris">
 
-                                    <label for="naam">Voorletter(s)</label>
-                                    <input type="text" name="naam" pattern="[A-Z.]+" required> 
+                                    <label>Voorletter(s)
+                                        <input type="text" name="naam" pattern="[A-Z.]+" required> 
+                                    </label>
 
-                                    <label for="naam">Tussenvoegsel(s)</label>
-                                    <input type="text" name="naam">
+                                    <label>Tussenvoegsel(s)
+                                        <input type="text" name="naam">
+                                    </label>
 
-                                    <label for="naam">Achternaam</label>
-                                    <input type="text" name="naam" required>
+                                    <label>Achternaam
+                                        <input type="text" name="naam" required>
+                                    </label>
 
-                                    <label for="naam">Vestigingsplaats</label>
-                                    <input type="text" name="naam" required>
+                                    <label>Vestigingsplaats
+                                        <input type="text" name="naam" required>
+                                    </label>
 
-                                    <label for="testament-laatste-wijziging">Datum van het testament of van de laatste wijziging</label>
-                                    <input type="date" name="testament-laatste-wijziging" value="yyyy-mm-dd" min="2024-16-07" max="2026-16-02" required>
+                                    <label>Datum van het testament of van de laatste wijziging
+                                        <input type="date" name="testament-laatste-wijziging" min="2024-16-07" max="16-02-2026" required>
+                                    </label><!--Hier doet de datumpicker het niet-->
+                                     
                                 </fieldset>
                             </fieldset>
 
                             <button type="submit">Verzenden</button>
                         </fieldset>
-
-                        <!-- <fieldset>
-                            <label for="email">E-mail:</label>
-                            <input type="email" name="email" required>
-                            
-                            <label for="bericht">Bericht:</label>
-                            <textarea name="bericht"></textarea>
-                        </fieldset> -->
                     </form>
                 </section>
-            </div>
+        
 
             <script src="js/script.js"></script>
         </main>

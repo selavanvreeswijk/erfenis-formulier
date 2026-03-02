@@ -4,21 +4,129 @@
     box-sizing: border-box;
 }
 
-/* @font-face{ 
-    font-family:'Arnhem';
-    src: url('../fonts/arnhem.woff2') format('truetype');
-} */
+@font-face{ 
+    font-family:'Roboto Regular';
+    src: url('../fonts/roboto-regular.woff2') format('woff2');
+}
+
+@font-face{ 
+    font-family:'Roboto Medium';
+    src: url('../fonts/Roboto-Medium.woff2') format('woff2');
+}
 
 /* --------------------------------------------------------------------------------- MARK: GENERAL 
 */
 
+:root{
+    /* Backgrounds */
+    --color-background: #ffffff;
+    --input-background:#ffffff;
+    --form-background: #e6e6e9;
+    --ns-yellow:#ffc710;
+
+    /* Content */
+    --color-content-default: #1f2937; /* gray.800 */
+    --color-content-default-inverse: #ffffff;
+
+    --color-content-emphasis: #003082; /* blue.700 */
+    --color-content-subtle: rgba(0, 0, 0, 0.5); /* alpha.black.500 */
+    --color-content-placeholder: rgba(0, 0, 0, 0.4);
+
+    /* Interactive */
+    --color-content-interactive-hover: #003e99; /* blue.600 */
+    --color-content-interactive-pressed: #002b66; /* blue.700 */
+    --color-content-interactive-default-inverse: #ffffff;
+
+    /* Status */
+    --color-content-info: #0052cc;
+    --color-content-success: #2e7d5b; /* green.600 */
+    --color-content-warning: #ea580c; /* orange.500 */
+    --color-content-error: #d90429; /* red.600 */
+    --color-content-error-inverse: #f28b94;
+
+    /* Destructive */
+    --color-content-destructive-default: #d90429;
+    --color-content-destructive-hover: #b00020;
+    --color-content-destructive-pressed: #8a0018;
+
+    /* Borders & inputs */
+    --help-text: #6B7280;
+    --color-border-input: #d1d5db;
+    --color-background-input: #ffffff;
+
+    /* Accent combinations */
+    --color-content-on-accent-subtle: rgba(0, 0, 0, 0.68);
+    --color-content-on-accent-yellow-default: rgba(0, 0, 0, 0.6);
+
+    /* Logo */
+    --color-content-logo: #003082;
+}
+
+/*Nog instellen*/
+
+/* .dark-theme{
+    --background-color:#0B0F19;
+    --label: #FFFFFF;
+    --help-text: #9CA3AF;
+    --input-border: #374151;
+    --input-background:#111827;
+} */
+
+.dark{
+    --color-background: #0b0f19;
+
+    --color-content-default: #e5e7eb;           /* gray.200 */
+    --color-content-default-inverse: #111827;
+
+    --color-content-emphasis: #ffffff;
+    --color-content-subtle: rgba(255, 255, 255, 0.5);
+    --color-content-placeholder: rgba(255, 255, 255, 0.4);
+
+    --color-content-interactive-default: #3b82f6; /* blue.400 */
+    --color-content-interactive-hover: #60a5fa;   /* blue.300 */
+    --color-content-interactive-pressed: #93c5fd; /* blue.200 */
+    --color-content-interactive-default-inverse: #1e3a8a;
+
+    --color-content-selected: #ffffff;
+
+    --color-content-info: #3b82f6;
+    --color-content-success: #4ade80;   /* green.300 */
+    --color-content-warning: #fb923c;   /* orange.400 */
+    --color-content-error: #f87171;     /* red.400 */
+    --color-content-error-inverse: #b00020;
+
+    --color-content-destructive-default: #f87171;
+    --color-content-destructive-hover: #ef4444;
+    --color-content-destructive-pressed: #dc2626;
+
+    --color-border-input: #374151;
+    --color-background-input: #111827;
+
+    --color-content-on-accent-subtle: #ffffff;
+    --color-content-on-accent-yellow-default: #1f2937;
+
+    --color-content-logo: #facc15; /* yellow.400 */
+}
+
+body{
+    background-color: var(--ns-yellow);
+
+    font: 'Roboto Regular';
+    font-size: clamp(0.95rem, 0.9rem + 0.3vw, 1rem);
+    line-height: 1.5;
+}
+
 header{
-    color: red;
+    color: var(--color-content-error);
 
     display: flex;
     justify-content: center;
 
     margin-top: 0.5em;
+}
+
+main section:first-of-type{
+    margin: 0.5em;
 }
 
 fieldset{
@@ -36,9 +144,56 @@ button{
     flex-direction: row;
 }
 
+h1{
+    color: var(--color-content-emphasis);   
+    font: 'Roboto Medium';
+    font-size: clamp(1.375rem, 1.125rem + 0.8333vi, 1.75rem);
+}
+
+/* h2{
+  font-size: clamp(1.25rem, 1.0833rem + 0.5556vi, 1.5rem);
+} */
+
+legend{
+    font-size: clamp(1.125rem, 1.0417rem + 0.2778vi, 1.25rem);
+    color: var(--color-content-info);
+}
+
+input,
+select,
+textarea{
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--color-content-info);
+}
+
+main section p{
+    color: var(--color-content-info);
+    font-size: 1rem;
+}
+
+button{
+    background-color: var(--color-content-emphasis);
+    color: var(--color-background);
+    border-radius: 6px;
+    padding: 2em 4em;
+}
+
 /* --------------------------------------------------------------------------------- MARK: FORMS 
 */
 
-.main-container{
+main{
+    background-color: var(--form-background);
+    border-radius: 6px;
+
     margin: 0.5em;
 }
+
+fieldset{
+    background-color: var(--color-background);
+    border-radius: 6px;
+    --color-border-input: #d1d5db;
+
+    margin: 0.5em;
+}
+

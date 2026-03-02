@@ -24,19 +24,21 @@ Hier was ik ziek.
 Hier was ik ziek.
 
 ### Vrijdag
-
+Vandaag heb ik het voorgangsgesprek gevolgd. Ik heb feedback gekregen over dingen als een inputveld in een label zetten en ook te beginnen met de styling van mijn formulier. Ook werkte mijn minlength & max length niet, net zoals mijn datumprikker wanneer ik daar waarden aan gaf. Hier wil ik in de vakantie nog even aan zitten, om ook niet achter te lopen. 
 
 ### Weekverslag week 3
-
+Deze week is Browser Technologies begonnen. Ik heb gelukkig het begin meegemaakt waarin ik de eerste pagina van mijn formulier heb opgesteld, en werd daarna helaas ziek. Hierdoor heb ik niet meer verder kunnen werken. Ik wil hier in de vakantie iets van inhalen en daarna er weer lekker mee aan de slag gaan!
 
 </details>
 
-<details><summary>Week 4</summary>
+<details><summary>Week 5</summary>
 
-## Week 4
+## Week 5
 
 ### Maandag
+Ik heb geprobeerd om er in de vakantie aan te zitten maar ik was de hele vakantie super moe, ik denk nog van het ziek zijn. Vandaag ben ik de dag begonnen met een workshop van Victor over de validatie van formulieren, die duurde ongeveer een uur. Daarna ben ik begonnen aan de styling van mijn formulier. Ik denk dat ik hier drie uur mee bezig ben geweest. Dit ging niet soepel en ik had moeite om mijn focus hier te houden. Ik denk dat ik nog even moet inkomen na de vakantie. Daarna heb ik de artikelen gelezen voor de Weekly Geek van morgenochtend. Morgen wil ik de styling finaliseren en beginnen met mijn eerste pattern. 
 
+![screenshot huidig werk](/images/prototype-2.png)
 
 ### Dinsdag
 
@@ -48,8 +50,8 @@ Hier was ik ziek.
 
 ### Vrijdag
 
-### Weekverslag week 4
-
+### Weekverslag week 5
+Na een week vakantie gehad te hebben...
 
 </details>
 
