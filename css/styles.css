@@ -11,7 +11,7 @@
 
 @font-face{ 
     font-family:'Roboto Medium';
-    src: url('../fonts/Roboto-Medium.woff2') format('woff2');
+    src: url('../fonts/roboto-medium.woff2') format('woff2');
 }
 
 /* --------------------------------------------------------------------------------- MARK: GENERAL 
@@ -62,8 +62,6 @@
     --color-content-logo: #003082;
 }
 
-/*Nog instellen*/
-
 /* .dark-theme{
     --background-color:#0B0F19;
     --label: #FFFFFF;
@@ -72,27 +70,27 @@
     --input-background:#111827;
 } */
 
-.dark{
+/* .dark{
     --color-background: #0b0f19;
 
-    --color-content-default: #e5e7eb;           /* gray.200 */
+    --color-content-default: #e5e7eb;     
     --color-content-default-inverse: #111827;
 
     --color-content-emphasis: #ffffff;
     --color-content-subtle: rgba(255, 255, 255, 0.5);
     --color-content-placeholder: rgba(255, 255, 255, 0.4);
 
-    --color-content-interactive-default: #3b82f6; /* blue.400 */
-    --color-content-interactive-hover: #60a5fa;   /* blue.300 */
-    --color-content-interactive-pressed: #93c5fd; /* blue.200 */
+    --color-content-interactive-default: #3b82f6; 
+    --color-content-interactive-hover: #60a5fa;   
+    --color-content-interactive-pressed: #93c5fd;
     --color-content-interactive-default-inverse: #1e3a8a;
 
     --color-content-selected: #ffffff;
 
     --color-content-info: #3b82f6;
-    --color-content-success: #4ade80;   /* green.300 */
-    --color-content-warning: #fb923c;   /* orange.400 */
-    --color-content-error: #f87171;     /* red.400 */
+    --color-content-success: #4ade80; 
+    --color-content-warning: #fb923c;   
+    --color-content-error: #f87171;  
     --color-content-error-inverse: #b00020;
 
     --color-content-destructive-default: #f87171;
@@ -105,28 +103,35 @@
     --color-content-on-accent-subtle: #ffffff;
     --color-content-on-accent-yellow-default: #1f2937;
 
-    --color-content-logo: #facc15; /* yellow.400 */
-}
+    --color-content-logo: #facc15;
+} */
 
 body{
-    background-color: var(--ns-yellow);
+    background-color: var(--form-background);
 
-    font: 'Roboto Regular';
+    font-family: 'Roboto Regular', sans-serif;
     font-size: clamp(0.95rem, 0.9rem + 0.3vw, 1rem);
     line-height: 1.5;
 }
 
 header{
     color: var(--color-content-error);
+    background-color: var(--ns-yellow);
 
     display: flex;
     justify-content: center;
 
-    margin-top: 0.5em;
+    padding: 0.5em 0;
+
+    top: 0;
+    height: 50vh;
+    width: 100vw;
+    position: absolute;
+    z-index: -1;
 }
 
 main section:first-of-type{
-    margin: 0.5em;
+    margin: 1.5em 0.7em;
 }
 
 fieldset{
@@ -136,18 +141,14 @@ fieldset{
 
 button{
     margin: 1em auto;
-    max-width: 8em;
     padding: 0.2em 0.5em;
-}
-
-.radio{
-    flex-direction: row;
 }
 
 h1{
     color: var(--color-content-emphasis);   
-    font: 'Roboto Medium';
+    font-family: 'Roboto Medium', sans-serif;
     font-size: clamp(1.375rem, 1.125rem + 0.8333vi, 1.75rem);
+    padding-top: 0.5em;
 }
 
 /* h2{
@@ -157,14 +158,15 @@ h1{
 legend{
     font-size: clamp(1.125rem, 1.0417rem + 0.2778vi, 1.25rem);
     color: var(--color-content-info);
+    margin-bottom: 0.2em;
 }
 
 input,
 select,
 textarea{
-  font-size: 1rem;
-  line-height: 1.4;
-  color: var(--color-content-info);
+    color: var(--color-content-info);
+    font-size: 1rem;
+    line-height: 1.4;
 }
 
 main section p{
@@ -175,25 +177,173 @@ main section p{
 button{
     background-color: var(--color-content-emphasis);
     color: var(--color-background);
+
     border-radius: 6px;
     padding: 2em 4em;
+}
+
+main{
+    background-color: var(--color-background);
+    border-radius: 6px;
+
+    margin: 2.5em 0.4em 0.5em 0.4em;
+    z-index: 1;
+}
+
+.legend-titel{
+    color: var(--color-content-emphasis);   
+    font-family: 'Roboto Medium', sans-serif;
+    font-size: clamp(1.125rem, 1.125rem + 0.8333vi, 1.75rem);
+
+    margin: 0.3em;
+
+    border-bottom: solid 1px var(--ns-yellow);
+}
+
+.extra-margin{
+    margin: 0.59em;
 }
 
 /* --------------------------------------------------------------------------------- MARK: FORMS 
 */
 
-main{
-    background-color: var(--form-background);
+input[type="text"],
+input[type="number"],
+input[type="date"]{
+    color: var(--color-content-subtle);
+    font-size: 16px;
+    background-color: var(--color-background-input);
+
+    border: 1px solid var(--color-border-input);
     border-radius: 6px;
 
-    margin: 0.5em;
+    padding: 16px;
 }
 
 fieldset{
-    background-color: var(--color-background);
-    border-radius: 6px;
-    --color-border-input: #d1d5db;
+    border: none;
 
-    margin: 0.5em;
+    margin: 0.3em;
 }
 
+label{
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 12px;
+}
+
+/* Radio buttons */
+
+.radio{
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.radio input[type="radio"]{
+    display: none;
+}
+
+.radio-button{
+    background-color: var(--color-background-input);
+    color: var(--color-content-default);
+
+    display: block;
+    padding: 16px;
+    border-radius: 6px;
+    border: 1px solid var(--color-border-input);
+    cursor: pointer;
+
+    transition: all 0.15s ease;
+}
+
+.radio-button:hover{
+    border-color: var(--color-content-emphasis);
+    background-color: var(--form-background);
+}
+
+.radio-button:has(input:checked){
+    border-color: var(--color-content-emphasis);
+    background-color: var(--color-content-emphasis);
+    color: var(--color-content-default-inverse);
+}
+
+/* Feedback */
+input.error{
+  border-color: var(--color-content-error);
+}
+
+input.success{
+  border-color: var(--color-content-success);
+}
+
+.error-message{
+  display: none;
+  color: var(--color-content-error);
+  font-size: 0.95em;
+
+  margin-top: 0.2em;
+}
+
+.help-text{
+  color: var(--help-text);
+  font-size: 0.8em;
+
+  margin-top: 0.2em;
+}
+
+label{
+  position: relative;
+}
+
+label input{
+  padding-right: 2rem;
+}
+
+.checkmark,
+.error-icon{
+  position: absolute;
+  right: 0.7rem;
+  top: 50%;
+  display: none;
+}
+
+.checkmark{
+  color: var(--color-content-success);
+}
+
+.error-icon{
+  color: var(--color-content-error);
+  font-weight: bold;
+}
+
+.error-message{
+  display: none;
+}
+
+/* Success */
+input:valid:not(:placeholder-shown) ~ .checkmark{
+  display: block;
+}
+
+/* Error */
+input:invalid:not(:placeholder-shown) ~ .error-icon{
+  display: flex;
+}
+
+input:invalid:not(:placeholder-shown) ~ .error-message{
+  display: block;
+}
+
+/* Dichtklappen */
+
+.klaptdicht{
+    display: block;
+}
+
+/* Bron: ik had een begin gemaakt maar Vasilis heeft me geholpen met de div zodat het beter werkt */
+fieldset:has(input[value="nee"]:checked) + div{
+    display: none;
+}

@@ -14,170 +14,334 @@
         </header>
 
         <main>
-            
-                <section>
-                    <h1>Formulier Erfenis</h1>
-                    <p>Vul dit formulier in.</p>
-                </section>
+            <section>
+                <h1>Erfenis Formulier</h1>
+                <p>Vul dit formulier in.</p>
+            </section>
 
-                <section>
-                    <form>
-                        <fieldset>
-                            <legend>Persoonsgegevens overledene</legend>
+            <section>
+                <form>
+                    <fieldset>
+                        <legend class="legend-titel">Persoonsgegevens overledene</legend>
 
-                            <fieldset> <!--1a-->
-                                <legend>Gegevens overledene</legend>
+                        <fieldset class="extra-margin"> <!--1a-->
+                            <legend>Gegevens overledene</legend>
 
-                                <label>Voorletter(s)
-                                    <input type="text" name="naam" pattern="[A-Z.]+" required> <!--Bron pattern: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/pattern -->
+                            <label>Voorletter(s)
+                                <input 
+                                    type="text" 
+                                    name="naam" 
+                                    pattern="[A-Za-z.]+" 
+                                    placeholder=" "
+                                    required> <!--Bron pattern: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/pattern -->
+
+                                <p class="error-message"></p>
+                                <span class="checkmark">✔</span>
+                                <span class="error-icon">!</span>
+                            </label>
+
+                            <label>Tussenvoegsel(s)
+                                <input 
+                                    type="text"
+                                    name="naam">
+                            </label>
+
+                            <label>Achternaam
+                                <input 
+                                    type="text" 
+                                    name="naam" 
+                                    placeholder=" "
+                                    required>
+
+                                <p class="error-message"></p>  
+                                <span class="checkmark">✔</span> 
+                                <span class="error-icon">!</span>                             
+                            </label>
+
+                            <label>BSN
+                                <input 
+                                    type="text" 
+                                    pattern="\d{9}" 
+                                    maxlength="9" 
+                                    placeholder=" "
+                                    required>
+
+                                <p class="help-text">Vul 9 cijfers in, zonder spaties of punten.</p>
+                                <p class="error-message"></p>
+                                <span class="checkmark">✔</span>
+                                <span class="error-icon">!</span>                             
+                            </label>
+
+                            <label>Overlijdensdatum
+                                <input 
+                                    type="date" 
+                                    name="overlijdensdatum" 
+                                    min="2024-07-16" 
+                                    max="2026-03-03" 
+                                    required> <!--Bron minimale datum: https://www.belastingdienst.nl/wps/wcm/connect/nl/erfbelasting/content/wanneer-moet-mijn-aangifte-erfbelasting-binnen-zijn-->
+                                
+                                <p class="error-message"></p>                                                                                   
+                            </label>
+                        </fieldset>
+
+                        <fieldset> <!--1b-->
+                            <legend class="legend-titel">Partnerschap overledene</legend>
+
+                            <fieldset class="radio">
+                                <legend>Was de overledene getrouwd of had de overledene een geregistreerde partner op het moment van overlijden?</legend>
+                                    
+                                <label class="radio-button">Ja
+                                    <input 
+                                        type="radio" 
+                                        value="ja" 
+                                        name="getrouwd" 
+                                        required>
                                 </label>
 
-                                <label>Tussenvoegsel(s)
-                                    <input type="text" name="naam">
-                                </label>
+                                <label class="radio-button">Nee
+                                    <input 
+                                        type="radio" 
+                                        value="nee" 
+                                        name="getrouwd" 
+                                        required>
+                                </label> 
 
-                                <label>Achternaam
-                                    <input type="text" name="naam" required>
-                                </label>
-
-                                <label>BSN overledene
-                                    <input type="number" minlength="9" maxlength="9" required> <!--Bron min length: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/minlength-->
-                                </label>
-
-                                <label>Overlijdensdatum
-                                    <input type="date" name="overlijdensdatum" value="yyyy-mm-dd" min="2024-16-07" max="2026-16-02" required> <!--Bron minimale datum: https://www.belastingdienst.nl/wps/wcm/connect/nl/erfbelasting/content/wanneer-moet-mijn-aangifte-erfbelasting-binnen-zijn-->
-                                </label>
+                                <p class="error-message"></p>                                                          
                             </fieldset>
 
-                            <fieldset> <!--1b-->
-                                <legend>Partnerschap overledene</legend>
-
-                                <fieldset class="radio">
-                                    <legend>Was de overledene getrouwd of had de overledene een geregistreerde partner op het moment van overlijden?</legend>
-                                    
-                                    <label>Ja
-                                        <input type="radio" value="ja" name="getrouwd">
-                                    </label>
-
-                                    <label>Nee
-                                        <input type="radio" value="nee" name="getrouwd">
-                                    </label> <!--Als je hier op klikt klapt iets nog in-->
-                                </fieldset>
-
-                                <fieldset class="radio"> 
+                            <div>
+                                <fieldset class="radio klaptdicht"> 
                                     <legend>Hadden de overledene en diens echtgenoot of geregistreerde partner huwelijkse of partnerschapsvoorwaarden laten vastleggen in een notariële akte?</legend>
 
-                                    <label>Ja
-                                        <input type="radio" value="ja" name="geregistreerd-partnerschap">
+                                    <label class="radio-button">Ja
+                                        <input 
+                                            type="radio" 
+                                            value="ja" 
+                                            name="geregistreerd-partnerschap" 
+                                            required>
                                     </label> <!--Nog dat je een kopie met de aangifte mee moet sturen-->
 
-                                    <label>Nee
-                                        <input type="radio" value="nee" name="geregistreerd-partnerschap">
+                                    <label class="radio-button">Nee
+                                        <input 
+                                            type="radio" 
+                                            value="nee" 
+                                            name="geregistreerd-partnerschap"
+                                            required>
                                     </label>
+
+                                    <p class="error-message"></p>                                                          
                                 </fieldset>
 
-                                <fieldset class="radio">
-                                    <legend>Hadden de overledene en diens partner een finaal verrekenbeding?</legend>
+                                <div>
+                                    <fieldset class="radio klaptdicht">
+                                        <legend>Hadden de overledene en diens partner een finaal verrekenbeding?</legend>
 
-                                    <label>Ja
-                                        <input type="radio" value="ja" name="finaal-verrekenbeding">
-                                    </label> <!--Nog dat je een kopie met de aangifte mee moet sturen-->
+                                        <label class="radio-button" >Ja
+                                            <input 
+                                                type="radio" 
+                                                value="ja" 
+                                                name="finaal-verrekenbeding" 
+                                                required>
+                                        </label> <!--Nog dat je een kopie met de aangifte mee moet sturen-->
 
-                                    <label>Nee
-                                        <input type="radio" value="nee" name="finaal-verrekenbeding">
+                                        <label class="radio-button">Nee
+                                            <input 
+                                                type="radio" 
+                                                value="nee" 
+                                                name="finaal-verrekenbeding" 
+                                                required>
+                                        </label>
+
+                                        <p class="error-message"></p>                                                          
+                                    </fieldset>
+
+                                    <fieldset class="klaptdicht">
+                                        <label>Overlijdensdatum
+                                        <input 
+                                            type="date" 
+                                            name="overlijdensdatum" 
+                                            min="2024-07-16" 
+                                            max="2026-03-03" 
+                                            required> <!--Nog juiste datum van maken-->
+                                        
+                                        <p class="error-message"></p>                                                                                   
                                     </label>
-                                </fieldset>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset> <!--1c-->
+                            <legend class="legend-titel">Kinderen overledene</legend>
+
+                            <fieldset class="radio">
+                                <legend>Had de overledene kinderen?</legend>
+
+                                <label class="radio-button">Ja
+                                    <input 
+                                        type="radio" 
+                                        value="ja" 
+                                        name="finaal-verrekenbeding" 
+                                        required>
+                                </label> 
+
+                                <label class="radio-button">Nee
+                                    <input 
+                                        type="radio" 
+                                        value="nee" 
+                                        name="finaal-verrekenbeding" 
+                                        required>
+                                </label> 
+
+                                <p class="error-message"></p>                                                          
                             </fieldset>
 
-                            <fieldset> <!--1c-->
-                                <legend>Kinderen overledene</legend>
-
-                                <fieldset class="radio">
-                                    <legend>Had de overledene kinderen?</legend>
-
-                                    <label>Ja
-                                        <input type="radio" value="ja" name="finaal-verrekenbeding">
-                                    </label> 
-
-                                    <label>Nee
-                                        <input type="radio" value="nee" name="finaal-verrekenbeding">
-                                    </label> <!--Door naar 1d-->
-                                </fieldset>
-
-                                <fieldset class="radio">
+                            <div>
+                                <fieldset class="radio klaptdicht">
                                     <legend>Is 1 van deze kinderen eerder overleden dan de overledene voor wie u nu aangifte doet?</legend>
 
-                                    <label>Ja
-                                        <input type="radio" value="ja" name="kind-eerder-overleden">
+                                    <label class="radio-button">Ja
+                                        <input 
+                                            type="radio" 
+                                            value="ja" 
+                                            name="kind-eerder-overleden" 
+                                            required>
                                     </label> 
 
-                                    <label>Nee
-                                        <input type="radio" value="nee" name="kind-eerder-overleden">
-                                    </label> <!--Door naar 1d-->
-                                </fieldset>
-
-                                <fieldset class="radio">
-                                    <legend>Had dit overleden kind zelf kinderen?</legend>
-
-                                    <label>Ja
-                                        <input type="radio" value="ja" name="overleden-kind-zelf-kinderen">
+                                    <label class="radio-button">Nee
+                                        <input 
+                                            type="radio" 
+                                            value="nee" 
+                                            name="kind-eerder-overleden" 
+                                            required>
                                     </label> 
 
-                                    <label>Nee
-                                        <input type="radio" value="nee" name="overleden-kind-zelf-kinderen">
-                                    </label> <!--Door naar 1d-->
+                                    <p class="error-message"></p>                                                          
                                 </fieldset>
+
+                                <div>
+                                    <fieldset class="radio klaptdicht">
+                                        <legend>Had dit overleden kind zelf kinderen?</legend>
+
+                                        <label class="radio-button">Ja
+                                            <input 
+                                                type="radio" 
+                                                value="ja" 
+                                                name="overleden-kind-zelf-kinderen" 
+                                                required>
+                                        </label> 
+
+                                        <label class="radio-button">Nee
+                                            <input 
+                                                type="radio" 
+                                                value="nee" 
+                                                name="overleden-kind-zelf-kinderen" 
+                                                required>
+                                        </label>
+
+                                        <p class="error-message"></p>                                                          
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset> <!--1d-->
+                            <legend class="legend-titel">Testament overledene</legend>
+
+                            <fieldset class="radio">
+                                <legend>Had de overledene een testament?</legend>
+
+                                <label class="radio-button">Ja
+                                    <input 
+                                        type="radio" 
+                                        value="ja" 
+                                        name="testament" 
+                                        required>
+                                </label> 
+
+                                <label class="radio-button">Nee
+                                    <input 
+                                        type="radio" 
+                                        value="nee" 
+                                        name="testament" 
+                                        required>
+                                </label> 
+
+                                <p class="error-message"></p>                                                          
                             </fieldset>
 
-                            <fieldset> <!--1d-->
-                                <legend>Testament overledene</legend>
-
-                                <fieldset>
-                                    <legend>Had de overledene een testament?</legend>
-
-                                    <label>Ja
-                                        <input type="radio" value="ja" name="testament">
-                                    </label> 
-
-                                    <label>Nee
-                                        <input type="radio" value="nee" name="testament">
-                                    </label> 
-                                </fieldset>
-
-                                <fieldset>
+                            <div>
+                                <fieldset class="klaptdicht">
                                     <legend>Protocolnummer notaris</legend>
 
-                                    <input type="number" minlength="6" maxlength="6" name="protocolnummer-notaris">
+                                    <input 
+                                        type="number" 
+                                        minlength="6" 
+                                        maxlength="6" 
+                                        name="protocolnummer-notaris">
 
                                     <label>Voorletter(s)
-                                        <input type="text" name="naam" pattern="[A-Z.]+" required> 
+                                        <input 
+                                            type="text" 
+                                            name="naam" 
+                                            pattern="[A-Z.]+" 
+                                            placeholder=" "
+                                            required> 
+
+                                        <p class="error-message"></p>
+                                        <span class="checkmark">✔</span>
+                                        <span class="error-icon">!</span>                                                        
                                     </label>
 
                                     <label>Tussenvoegsel(s)
-                                        <input type="text" name="naam">
+                                        <input 
+                                            type="text"
+                                            name="naam">
                                     </label>
 
                                     <label>Achternaam
-                                        <input type="text" name="naam" required>
+                                        <input 
+                                            type="text" 
+                                            name="naam" 
+                                            placeholder=" "
+                                            required>
+
+                                        <p class="error-message"></p>
+                                        <span class="checkmark">✔</span>
+                                        <span class="error-icon">!</span>                                                     
                                     </label>
 
                                     <label>Vestigingsplaats
-                                        <input type="text" name="naam" required>
+                                        <input 
+                                            type="text" 
+                                            name="naam" 
+                                            placeholder=" "
+                                            required>
+
+                                        <p class="error-message"></p>
+                                        <span class="checkmark">✔</span>
+                                        <span class="error-icon">!</span>                                                          
                                     </label>
 
                                     <label>Datum van het testament of van de laatste wijziging
-                                        <input type="date" name="testament-laatste-wijziging" min="2024-16-07" max="16-02-2026" required>
-                                    </label><!--Hier doet de datumpicker het niet-->
-                                     
+                                        <input 
+                                            type="date" 
+                                            name="testament-laatste-wijziging"
+                                            min="2024-07-16" 
+                                            max="2026-03-03" 
+                                            required>
+
+                                        <p class="error-message"></p>
+                                    </label>
                                 </fieldset>
-                            </fieldset>
-
-                            <button type="submit">Verzenden</button>
+                            </div>
                         </fieldset>
-                    </form>
-                </section>
-        
 
+                        <button type="submit">Verzenden</button>
+                    </fieldset>
+                </form>
+            </section>
+        
             <script src="js/script.js"></script>
         </main>
     </body>
