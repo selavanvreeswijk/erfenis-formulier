@@ -14,97 +14,31 @@
     src: url('../fonts/roboto-medium.woff2') format('woff2');
 }
 
-/* --------------------------------------------------------------------------------- MARK: GENERAL 
+/* --------------------------------------------------------------------------------- MARK: ALGEMEEN 
 */
 
 :root{
-    /* Backgrounds */
+    /* Achtergronden */
     --color-background: #ffffff;
-    --input-background:#ffffff;
     --form-background: #e6e6e9;
-    --ns-yellow:#ffc710;
-
-    /* Content */
-    --color-content-default: #1f2937; /* gray.800 */
-    --color-content-default-inverse: #ffffff;
-
-    --color-content-emphasis: #003082; /* blue.700 */
-    --color-content-subtle: rgba(0, 0, 0, 0.5); /* alpha.black.500 */
-    --color-content-placeholder: rgba(0, 0, 0, 0.4);
-
-    /* Interactive */
-    --color-content-interactive-hover: #003e99; /* blue.600 */
-    --color-content-interactive-pressed: #002b66; /* blue.700 */
-    --color-content-interactive-default-inverse: #ffffff;
-
-    /* Status */
-    --color-content-info: #0052cc;
-    --color-content-success: #2e7d5b; /* green.600 */
-    --color-content-warning: #ea580c; /* orange.500 */
-    --color-content-error: #d90429; /* red.600 */
-    --color-content-error-inverse: #f28b94;
-
-    /* Destructive */
-    --color-content-destructive-default: #d90429;
-    --color-content-destructive-hover: #b00020;
-    --color-content-destructive-pressed: #8a0018;
-
-    /* Borders & inputs */
-    --help-text: #6B7280;
-    --color-border-input: #d1d5db;
+    --ns-yellow: #ffc710;
     --color-background-input: #ffffff;
 
-    /* Accent combinations */
-    --color-content-on-accent-subtle: rgba(0, 0, 0, 0.68);
-    --color-content-on-accent-yellow-default: rgba(0, 0, 0, 0.6);
+    /* Content */
+    --color-content-default: #1f2937;
+    --color-content-default-inverse: #ffffff;
+    --color-content-emphasis: #003082;
+    --color-content-subtle: rgba(0, 0, 0, 0.5);
 
-    /* Logo */
-    --color-content-logo: #003082;
+    /* Validatie */
+    --color-content-info: #0052cc;
+    --color-content-success: #2e7d5b;
+    --color-content-error: #d90429;
+
+    /* Borders & inputs */
+    --color-border-input: #d1d5db;
+    --help-text: #6B7280;
 }
-
-/* .dark-theme{
-    --background-color:#0B0F19;
-    --label: #FFFFFF;
-    --help-text: #9CA3AF;
-    --input-border: #374151;
-    --input-background:#111827;
-} */
-
-/* .dark{
-    --color-background: #0b0f19;
-
-    --color-content-default: #e5e7eb;     
-    --color-content-default-inverse: #111827;
-
-    --color-content-emphasis: #ffffff;
-    --color-content-subtle: rgba(255, 255, 255, 0.5);
-    --color-content-placeholder: rgba(255, 255, 255, 0.4);
-
-    --color-content-interactive-default: #3b82f6; 
-    --color-content-interactive-hover: #60a5fa;   
-    --color-content-interactive-pressed: #93c5fd;
-    --color-content-interactive-default-inverse: #1e3a8a;
-
-    --color-content-selected: #ffffff;
-
-    --color-content-info: #3b82f6;
-    --color-content-success: #4ade80; 
-    --color-content-warning: #fb923c;   
-    --color-content-error: #f87171;  
-    --color-content-error-inverse: #b00020;
-
-    --color-content-destructive-default: #f87171;
-    --color-content-destructive-hover: #ef4444;
-    --color-content-destructive-pressed: #dc2626;
-
-    --color-border-input: #374151;
-    --color-background-input: #111827;
-
-    --color-content-on-accent-subtle: #ffffff;
-    --color-content-on-accent-yellow-default: #1f2937;
-
-    --color-content-logo: #facc15;
-} */
 
 body{
     background-color: var(--form-background);
@@ -112,6 +46,8 @@ body{
     font-family: 'Roboto Regular', sans-serif;
     font-size: clamp(0.95rem, 0.9rem + 0.3vw, 1rem);
     line-height: 1.5;
+    display: flex;
+    justify-content: center;
 }
 
 header{
@@ -124,14 +60,15 @@ header{
     padding: 0.5em 0;
 
     top: 0;
-    height: 50vh;
-    width: 100vw;
+    height: clamp(180px, 30vh, 320px);
+    width: 100%;
+
     position: absolute;
     z-index: -1;
 }
 
 main section:first-of-type{
-    margin: 1.5em 0.7em;
+    margin: clamp(1rem, 2vw, 2rem);
 }
 
 fieldset{
@@ -151,10 +88,6 @@ h1{
     padding-top: 0.5em;
 }
 
-/* h2{
-  font-size: clamp(1.25rem, 1.0833rem + 0.5556vi, 1.5rem);
-} */
-
 legend{
     font-size: clamp(1.125rem, 1.0417rem + 0.2778vi, 1.25rem);
     color: var(--color-content-info);
@@ -167,6 +100,7 @@ textarea{
     color: var(--color-content-info);
     font-size: 1rem;
     line-height: 1.4;
+    width: 100%;
 }
 
 main section p{
@@ -179,37 +113,33 @@ button{
     color: var(--color-background);
 
     border-radius: 6px;
-    padding: 2em 4em;
+
+    padding: clamp(0.8rem, 1.5vw, 1.2rem) clamp(1.5rem, 3vw, 2.5rem);
+
+    display: block;
+    margin: 2rem auto;
 }
 
 main{
     background-color: var(--color-background);
     border-radius: 6px;
 
-    margin: 2.5em 0.4em 0.5em 0.4em;
     z-index: 1;
+
+    width: min(90vw, 700px);
+    margin: 3rem auto;
+    padding: clamp(1rem, 2vw, 2rem);
 }
 
-.legend-titel{
-    color: var(--color-content-emphasis);   
-    font-family: 'Roboto Medium', sans-serif;
-    font-size: clamp(1.125rem, 1.125rem + 0.8333vi, 1.75rem);
-
-    margin: 0.3em;
-
-    border-bottom: solid 1px var(--ns-yellow);
-}
-
-.extra-margin{
-    margin: 0.59em;
-}
-
-/* --------------------------------------------------------------------------------- MARK: FORMS 
+/* --------------------------------------------------------------------------------- MARK: FORMULIEREN 
 */
 
 input[type="text"],
 input[type="number"],
-input[type="date"]{
+input[type="date"],
+input[type="file"],
+input[type="e-mail"],
+input[type="list"]{
     color: var(--color-content-subtle);
     font-size: 16px;
     background-color: var(--color-background-input);
@@ -218,6 +148,10 @@ input[type="date"]{
     border-radius: 6px;
 
     padding: 16px;
+}
+
+input[type="file"]{
+    margin-top: 1em;
 }
 
 fieldset{
@@ -234,7 +168,6 @@ label{
 }
 
 /* Radio buttons */
-
 .radio{
     display: flex;
     flex-direction: column;
@@ -243,10 +176,16 @@ label{
 }
 
 .radio input[type="radio"]{
-    display: none;
+    -webkit-appearance: none;
+    appearance: none;
+    
+    /* Bron: Hier heeft Vasilis me mee geholpen in plaats van display:none, 
+    Anders werkte met tab heen en weer gaan niet */
+    position: absolute;
+    left: -100000em;
 }
 
-.radio-button{
+.radio > label{
     background-color: var(--color-background-input);
     color: var(--color-content-default);
 
@@ -259,18 +198,38 @@ label{
     transition: all 0.15s ease;
 }
 
-.radio-button:hover{
+.radio > label:hover{
     border-color: var(--color-content-emphasis);
     background-color: var(--form-background);
 }
 
-.radio-button:has(input:checked){
+.radio > label:has(input:checked){
     border-color: var(--color-content-emphasis);
     background-color: var(--color-content-emphasis);
     color: var(--color-content-default-inverse);
 }
 
-/* Feedback */
+.legend-titel{
+    color: var(--color-content-emphasis);   
+    font-family: 'Roboto Medium', sans-serif;
+    font-size: clamp(1.125rem, 1.125rem + 0.8333vi, 1.75rem);
+
+    margin: 0.3em;
+
+    border-bottom: solid 1px var(--ns-yellow);
+}
+
+.extra-margin{
+    margin: 0.59em;
+}
+
+.instructie{
+    margin-left: 0.3em;
+}
+
+/* --------------------------------------------------------------------------------- MARK: VALIDATIE & FEEDBACK 
+*/
+
 input.error{
   border-color: var(--color-content-error);
 }
@@ -323,12 +282,10 @@ label input{
   display: none;
 }
 
-/* Success */
 input:valid:not(:placeholder-shown) ~ .checkmark{
   display: block;
 }
 
-/* Error */
 input:invalid:not(:placeholder-shown) ~ .error-icon{
   display: flex;
 }
@@ -337,13 +294,123 @@ input:invalid:not(:placeholder-shown) ~ .error-message{
   display: block;
 }
 
-/* Dichtklappen */
+/* --------------------------------------------------------------------------------- MARK: OPENKLAPPEN & TRANSITIE 
+*/
 
-.klaptdicht{
+/* --------------- Standaard vragen ------------*/
+.klaptopen{
+    display: none;
+}
+
+fieldset:has(input[value="ja"]:checked) + .klaptopen{
     display: block;
 }
 
-/* Bron: ik had een begin gemaakt maar Vasilis heeft me geholpen met de div zodat het beter werkt */
-fieldset:has(input[value="nee"]:checked) + div{
+.volgende-vraag{
+    view-transition-name: volgende-vraag;
+}
+
+::view-transition-old(volgende-vraag){
+  animation: 0.25s ease-out both move-out-tekst;
+}
+
+::view-transition-new(volgende-vraag){
+  animation: 0.35s ease-in both move-in-tekst;
+}
+
+@keyframes move-out-tekst{
+
+    from{
+        opacity: 1;
+    }
+
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes move-in-tekst{
+
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+
+}
+
+/* --------------- Adres in NL of Buitenland ------------*/
+.adres > fieldset:nth-of-type(2),
+.adres > fieldset:nth-of-type(3){
     display: none;
 }
+
+fieldset:has(input[value="nederland"]:checked) + fieldset{
+    display: block;
+}
+
+fieldset:has(input[value="buitenland"]:checked) + fieldset + fieldset{
+    display: block;
+}
+
+#adress-nederland{
+    view-transition-name: adres-nederland;
+}
+
+#adress-buitenland{
+    view-transition-name: adres-buitenland;
+}
+
+@keyframes move-out{
+
+    from{
+        transform: translateY(0%);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+}
+
+@keyframes move-in{
+
+    from{
+        transform: translateY(100%);
+        opacity: 1;
+    }
+
+    to{
+        transform: translateY(0%);
+        opacity: 0;
+    }
+
+}
+
+::view-transition-old(adres-nederland),
+::view-transition-old(adres-buitenland){
+  animation: 0.4s ease-in both move-out;
+}
+
+::view-transition-new(adres-nederland),
+::view-transition-new(adres-buitenland){
+  animation: 0.4s ease-out both move-in;
+}
+
+/* --------------- BSN of RSIN kiezen ------------*/
+.bsn,
+.becon,
+.protocol{
+    display: none;
+}
+
+fieldset:has(input[value="bsn"]:checked) .bsn,
+fieldset:has(input[value="becon"]:checked) .becon,
+fieldset:has(input[value="protocol"]:checked) .protocol{
+    display: block;
+}
+
+

@@ -15,10 +15,8 @@ Vanochtend en in een deel van de middag heb ik uitleg gekregen over deze nieuwe 
 ### Dinsdag
 Dinsdagochtend ben ik begonnen met een quiz over een artikel dat we hadden gelezen. Daarna had ik een workshop over HTML en daarna ben ik helaas ziek naar huis gegaan met koorts. Ik heb verder niet aan de opdracht kunnen werken omdat ik me niet goed voelde.
 
-
 ### Woensdag
 Hier was ik ziek.
-
 
 ### Donderdag 
 Hier was ik ziek.
@@ -54,28 +52,58 @@ Na een week vakantie gehad te hebben was ik bang dat ik heel erg achterliep maar
 
 </details>
 
-<details><summary>Week 5</summary>
+<details><summary>Week 6</summary>
 
 ## Week 6
 
 ### Maandag
 Vandaag zijn we de dag begonnen met een gastcollege van Rijk van Zanten. Hieruit heb ik vooral opgestoken dat het veel werk is om naar Amerika te emigreren of je eigen bedrijf te beginnen. Wel gaaf wat hij allemaal heeft opgezet en dat hij er zo voor gaat. Daarna heb ik een workshop van Victor gehad over accessibility en heb ik geleerd over dingen als aria-describeby. Dit duurde ongeveer een uur. Hierna ben ik de rest van de middag mijn styling gaan finaliseren, mijn validatie optimaliseren en als afsluiter heb ik gewerkt aan het laten inklappen van bepaalde vragen wanneer de gebruiker op 'nee' drukt. 
 
-Als afsluiter van de dag heb ik de video voor morgenochtend bekeken. Mijn mening: tijden veranderen. Iedereen heeft vanaf een jonge leeftijd al veel formulieren of andere webdingen gebruikt en is toe aan bijvoorbeeld maar 1 border bottom. Dingen mogen er ook ethetisch uitzien en hoeven niet voor altijd er oud uit te zien. Ben het er wel mee eens dat de legend  tekst in de border heel lelijk is. 
+Als afsluiter van de dag heb ik de video voor morgenochtend bekeken. Mijn mening: tijden veranderen. Iedereen heeft vanaf een jonge leeftijd al veel formulieren of andere webapplicaties gebruikt en is toe aan bijvoorbeeld maar 1 border bottom. Dingen mogen er ook ethetisch uitzien en hoeven niet voor altijd er oud uit te zien. Ben het er wel mee eens dat de legend  tekst in de border heel lelijk is.
+
+Morgen wil ik aan de slag met een planning maken van alles wat ik nog wil doen voor de deadline, beginnen met responsiveness en beginnen aan het idee van meerdere pagina's hebben. Als er nog tijd over is zou ik ook willen beginnen met de progressiebar. 
 
 ![screenshot huidig werk](/images/prototype-5.png)
 ![screenshot huidig werk](/images/prototype-6.png)
 
 ### Dinsdag
-Ik ben 
-
-![screenshot huidig werk](/images/prototype-3.png)
+Vandaag zijn we de dag begonnen met de Weekly Geek. Hierna ben ik aan de slag gegaan met responsiveness, een planning maken en vraag twee van het formulier implementeren in mijn html. Dit duurde vrij lang en ben ik ook nog niet klaar mee. Volgende week (maar eigenlijk het liefst dit weekend) wil ik aan de slag met alle html-content verder invullen, werken aan het switchen tussen pagina's, de progressiebar en het adres in NL of het buitenland uitwerken.
 
 ### Vrijdag
-Voortgangsgesprek
+Voortgangsgesprek feedback
+- Landcodes met datalist 
+- Animatie/ transitie op het inklappen van de vragen wanneer mensen 'nee' invullen
+- Reflectie op proces vóór deadline schrijven
 
 ### Weekverslag week 6
-Na een week vakantie gehad te hebben...
+...
+
+</details>
+
+<details><summary>Week 5</summary>
+
+## Week 6
+
+### Maandag
+Dit heb ik vandaag gedaan:
+- Landcodes met datalist gedaan
+- Gekeken naar de helpteksten van de gebruiker (voor bijvoorbeeld het uploaden van de akte)
+- Buitenland of NL adres keuze
+- Paar algemene classes weggehaald die weg konden
+- Animatie overgang met JavaScript begonnen
+
+### Dinsdag
+- BSIN of RSIN kiezen uitgewerkt
+- Gekeken naar mijn bronnen
+- CSS beter gestructureerd
+- Animatie overgang bij op vraag klikken verder gemaakt
+- Display: none op radio buttons weggehaald voor gebruik formulier met tab
+
+### Vrijdag
+
+
+### Weekverslag week 6
+...
 
 </details>
 
@@ -84,10 +112,9 @@ Na een week vakantie gehad te hebben...
 ## Bronnen
 Pattern: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/pattern
 
-Minlength: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/minlength
-
 Minimale datum: https://www.belastingdienst.nl/wps/wcm/connect/nl/erfbelasting/content/wanneer-moet-mijn-aangifte-erfbelasting-binnen-zijn 
 
+JavaScript functie scrollViewTransition & startViewTransition voor de animatie van het klikken op een knop heeft Viktor me mee geholpen. 
 
 </details>
 
