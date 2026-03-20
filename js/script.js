@@ -1,5 +1,8 @@
+// Validatie -----------------------------------
+
 const inputs = document.querySelectorAll('input');
 
+// Hier laat hij het validatiebericht zien in mijn <p> error-message
 // Bron: uitleg + workshop van Viktor
 inputs.forEach(input => {
 
@@ -26,7 +29,47 @@ inputs.forEach(input => {
   });
 });
 
-// ------------------------ Functie voor scroll + view transition ------------------------ 
+// Hier zorgt hij ervoor dat het formulier nog wel gevalideerd wordt met novalidate
+const form = document.querySelector('form');
+
+form.addEventListener('submit', (event) => {
+  const inputs = form.querySelectorAll('input');
+
+  let firstInvalid = null;
+
+  inputs.forEach(input => {
+    const error = input.parentElement.querySelector('.error-message');
+
+    if (!input.checkValidity()){
+      event.preventDefault();
+
+      input.classList.add('error');
+      input.classList.remove('success');
+
+      if (error){
+        error.textContent = "Please fill in this field correctly.";
+      }
+
+      if (!firstInvalid){
+        firstInvalid = input;
+      }
+
+    } else {
+      input.classList.remove('error');
+      input.classList.add('success');
+
+      if (error) {
+        error.textContent = "";
+      }
+    }
+  });
+
+  if (firstInvalid) {
+    firstInvalid.focus();
+  }
+});
+
+// Functie voor scroll + view transition ------------------------ 
 // Bron: met startViewTransition en ScrollIntoView heeft Viktor me geholpen
 function scrollMetTransitie(element, block = "center"){
   document.startViewTransition(() =>

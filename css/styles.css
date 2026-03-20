@@ -44,10 +44,7 @@ body{
     background-color: var(--form-background);
 
     font-family: 'Roboto Regular', sans-serif;
-    font-size: clamp(0.95rem, 0.9rem + 0.3vw, 1rem);
     line-height: 1.5;
-    display: flex;
-    justify-content: center;
 }
 
 header{
@@ -57,7 +54,7 @@ header{
     display: flex;
     justify-content: center;
 
-    padding: 0.5em 0;
+    padding-top: 0.7em;
 
     top: 0;
     height: clamp(180px, 30vh, 320px);
@@ -68,7 +65,7 @@ header{
 }
 
 main section:first-of-type{
-    margin: clamp(1rem, 2vw, 2rem);
+    margin-bottom: 1em;
 }
 
 fieldset{
@@ -81,15 +78,24 @@ button{
     padding: 0.2em 0.5em;
 }
 
+button:hover{
+    opacity: 0.9;
+}
+
+button:focus-visible{
+    outline: 3px solid var(--color-content-emphasis);
+    outline-offset: 3px;
+}
+
 h1{
     color: var(--color-content-emphasis);   
     font-family: 'Roboto Medium', sans-serif;
-    font-size: clamp(1.375rem, 1.125rem + 0.8333vi, 1.75rem);
+    font-size: clamp(1.375em, 1.125em + 0.8333vi, 1.75em);
     padding-top: 0.5em;
 }
 
 legend{
-    font-size: clamp(1.125rem, 1.0417rem + 0.2778vi, 1.25rem);
+    font-size: clamp(1.125em, 1.0417em + 0.2778vi, 1.25em);
     color: var(--color-content-info);
     margin-bottom: 0.2em;
 }
@@ -98,14 +104,14 @@ input,
 select,
 textarea{
     color: var(--color-content-info);
-    font-size: 1rem;
+    font-size: 1em;
     line-height: 1.4;
     width: 100%;
 }
 
 main section p{
     color: var(--color-content-info);
-    font-size: 1rem;
+    font-size: 1em;
 }
 
 button{
@@ -114,10 +120,10 @@ button{
 
     border-radius: 6px;
 
-    padding: clamp(0.8rem, 1.5vw, 1.2rem) clamp(1.5rem, 3vw, 2.5rem);
+    padding: clamp(0.8em, 1.5vw, 1.2em) clamp(1.5em, 3vw, 2.5em);
 
     display: block;
-    margin: 2rem auto;
+    margin: 2em auto;
 }
 
 main{
@@ -126,20 +132,18 @@ main{
 
     z-index: 1;
 
-    width: min(90vw, 700px);
-    margin: 3rem auto;
-    padding: clamp(1rem, 2vw, 2rem);
+    width: min(90%, 700px);
+    margin: 3em auto;
+    padding: clamp(1em, 2vw, 2em);
 }
 
 /* --------------------------------------------------------------------------------- MARK: FORMULIEREN 
 */
 
 input[type="text"],
-input[type="number"],
 input[type="date"],
 input[type="file"],
-input[type="e-mail"],
-input[type="list"]{
+input[type="e-mail"]{
     color: var(--color-content-subtle);
     font-size: 16px;
     background-color: var(--color-background-input);
@@ -156,8 +160,6 @@ input[type="file"]{
 
 fieldset{
     border: none;
-
-    margin: 0.3em;
 }
 
 label{
@@ -209,89 +211,101 @@ label{
     color: var(--color-content-default-inverse);
 }
 
+.radio > label:has(input:focus-visible){
+    outline: 3px solid var(--color-content-emphasis);
+    outline-offset: 2px;
+}
+
 .legend-titel{
     color: var(--color-content-emphasis);   
     font-family: 'Roboto Medium', sans-serif;
-    font-size: clamp(1.125rem, 1.125rem + 0.8333vi, 1.75rem);
-
-    margin: 0.3em;
+    font-size: clamp(1.125em, 1.125em + 0.8333vi, 1.75em);
 
     border-bottom: solid 1px var(--ns-yellow);
-}
-
-.extra-margin{
-    margin: 0.59em;
-}
-
-.instructie{
-    margin-left: 0.3em;
 }
 
 /* --------------------------------------------------------------------------------- MARK: VALIDATIE & FEEDBACK 
 */
 
 input.error{
-  border-color: var(--color-content-error);
+    border-color: var(--color-content-error);
 }
 
 input.success{
-  border-color: var(--color-content-success);
+    border-color: var(--color-content-success);
 }
 
 .error-message{
-  display: none;
-  color: var(--color-content-error);
-  font-size: 0.95em;
+    display: none;
+    color: var(--color-content-error);
+    font-size: 0.95em;
 
-  margin-top: 0.2em;
+    margin-top: 0.2em;
 }
 
 .help-text{
-  color: var(--help-text);
-  font-size: 0.8em;
+    color: var(--help-text);
+    font-size: 0.8em;
 
-  margin-top: 0.2em;
+    margin-top: 0.2em;
 }
 
 label{
-  position: relative;
+    position: relative;
 }
 
 label input{
-  padding-right: 2rem;
+    padding-right: 2em;
+    position: relative;
 }
 
 .checkmark,
 .error-icon{
-  position: absolute;
-  right: 0.7rem;
-  top: 50%;
-  display: none;
+    position: absolute;
+    right: 0.7em;
+    top: 50%;
+
+    display: none;
 }
 
-.checkmark{
-  color: var(--color-content-success);
+/* Ook een 2 omdat hij bij bsn niet goed styled door de hulptekst */
+.checkmark2,
+.error-icon2{
+    position: absolute;
+    right: 0.7em;
+    top: 40%;
+
+    display: none;
 }
 
-.error-icon{
-  color: var(--color-content-error);
-  font-weight: bold;
+.checkmark,
+.checkmark2{
+    color: var(--color-content-success);
 }
 
-.error-message{
-  display: none;
+.error-icon,
+.error-icon2{
+    color: var(--color-content-error);
+    font-weight: bold;
 }
 
-input:valid:not(:placeholder-shown) ~ .checkmark{
-  display: block;
+input:valid:not(:placeholder-shown) ~ .checkmark,
+input:valid:not(:placeholder-shown) ~ .checkmark2{
+    display: block;
 }
 
-input:invalid:not(:placeholder-shown) ~ .error-icon{
-  display: flex;
+input:invalid:not(:placeholder-shown) ~ .error-icon,
+input:invalid:not(:placeholder-shown) ~ .error-icon2{
+    display: flex;
 }
 
 input:invalid:not(:placeholder-shown) ~ .error-message{
-  display: block;
+    display: block;
+}
+
+input:focus-visible{
+    outline: 2px solid var(--color-content-emphasis);
+    outline-offset: 2px;
 }
 
 /* --------------------------------------------------------------------------------- MARK: OPENKLAPPEN & TRANSITIE 
@@ -311,11 +325,11 @@ fieldset:has(input[value="ja"]:checked) + .klaptopen{
 }
 
 ::view-transition-old(volgende-vraag){
-  animation: 0.25s ease-out both move-out-tekst;
+    animation: 0.25s ease-out both move-out-tekst;
 }
 
 ::view-transition-new(volgende-vraag){
-  animation: 0.35s ease-in both move-in-tekst;
+    animation: 0.35s ease-in both move-in-tekst;
 }
 
 @keyframes move-out-tekst{
@@ -355,11 +369,11 @@ fieldset:has(input[value="buitenland"]:checked) + fieldset + fieldset{
     display: block;
 }
 
-#adress-nederland{
+#adres-nederland{
     view-transition-name: adres-nederland;
 }
 
-#adress-buitenland{
+#adres-buitenland{
     view-transition-name: adres-buitenland;
 }
 
@@ -392,12 +406,12 @@ fieldset:has(input[value="buitenland"]:checked) + fieldset + fieldset{
 
 ::view-transition-old(adres-nederland),
 ::view-transition-old(adres-buitenland){
-  animation: 0.4s ease-in both move-out;
+    animation: 0.4s ease-in both move-out;
 }
 
 ::view-transition-new(adres-nederland),
 ::view-transition-new(adres-buitenland){
-  animation: 0.4s ease-out both move-in;
+    animation: 0.4s ease-out both move-in;
 }
 
 /* --------------- BSN of RSIN kiezen ------------*/
@@ -412,5 +426,3 @@ fieldset:has(input[value="becon"]:checked) .becon,
 fieldset:has(input[value="protocol"]:checked) .protocol{
     display: block;
 }
-
-

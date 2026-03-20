@@ -92,12 +92,10 @@ Dit heb ik vandaag gedaan:
 - Paar algemene classes weggehaald die weg konden
 - Animatie overgang met JavaScript begonnen
 
+Hier ben ik de hele dag mee bezig geweest. Met de animatie overgang een paar uur totdat ik er genoeg van had en toen ben ik iets anders gaan doen. Dat wil ik morgen gaan vragen.
+
 ### Dinsdag
-- BSIN of RSIN kiezen uitgewerkt
-- Gekeken naar mijn bronnen
-- CSS beter gestructureerd
-- Animatie overgang bij op vraag klikken verder gemaakt
-- Display: none op radio buttons weggehaald voor gebruik formulier met tab
+Vandaag heb ik het BSIN of RSIN kiezen verder uitgewerkt, evenals mijn css beter structureren, de animatie van op vragen klikken werkend maken en display: none op radio buttons weggehaald voor het formulier gebruiken met tab en mijn bronnen alvast goed vermeld. Hier allemaal ben ik de gehele ochtend mee bezig geweest. 
 
 ### Vrijdag
 

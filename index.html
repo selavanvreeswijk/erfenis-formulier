@@ -20,56 +20,61 @@
             </section>
 
             <section>
-                <form>
+                <form novalidate>
                     <fieldset> <!--1-->
                         <legend class="legend-titel">Persoonsgegevens overledene</legend>
 
-                        <fieldset class="extra-margin"> <!--1a-->
+                        <fieldset> <!--1a-->
                             <legend>Gegevens overledene</legend>
 
                             <label>Voorletter(s)
                                 <input 
                                     type="text" 
-                                    name="naam" 
+                                    name="voorletters" 
+                                    autocomplete="given-name"
                                     pattern="[A-Za-z.]+" 
                                     placeholder=" "
+                                    aria-describedby="voorletter-error"
                                     required> <!--Bron pattern: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/pattern -->
 
-                                <p class="error-message"></p>
-                                <span class="checkmark">✔</span>
-                                <span class="error-icon">!</span>
+                                <p id="voorletter-error" class="error-message" aria-live="polite"></p>
+                                <span class="checkmark" aria-hidden="true">✔</span>
+                                <span class="error-icon" aria-hidden="true">!</span>  
                             </label>
 
                             <label>Tussenvoegsel(s)
                                 <input 
                                     type="text"
-                                    name="naam">
+                                    name="tussenvoegsel">
                             </label>
 
                             <label>Achternaam
                                 <input 
                                     type="text" 
-                                    name="naam" 
+                                    name="achternaam" 
+                                    autocomplete="family-name"
                                     placeholder=" "
+                                    aria-describedby="achternaam-error"
                                     required>
 
-                                <p class="error-message"></p>  
-                                <span class="checkmark">✔</span> 
-                                <span class="error-icon">!</span>                             
+                                <p id="achternaam-error" class="error-message" aria-live="polite"></p> 
+                                <span class="checkmark" aria-hidden="true">✔</span> 
+                                <span class="error-icon" aria-hidden="true">!</span>                             
                             </label>
 
                             <label>BSN
                                 <input 
                                     type="text" 
+                                    aria-describedby="bsn-help bsn-error"
                                     pattern="\d{9}" 
                                     maxlength="9" 
                                     placeholder=" "
                                     required>
 
-                                <p class="help-text">Vul 9 cijfers in, zonder spaties of punten.</p>
-                                <p class="error-message"></p>
-                                <span class="checkmark">✔</span>
-                                <span class="error-icon">!</span>                             
+                                <p id="bsn-help" class="help-text">Vul 9 cijfers in, zonder spaties of punten.</p>
+                                <p id="bsn-error" class="error-message" aria-live="polite"></p>
+                                <span class="checkmark2" aria-hidden="true">✔</span>
+                                <span class="error-icon2" aria-hidden="true">!</span>                             
                             </label>
 
                             <label>Overlijdensdatum
@@ -78,9 +83,10 @@
                                     name="overlijdensdatum" 
                                     min="2024-08-10" 
                                     max="2026-03-10" 
+                                    aria-describedby="overlijdensdatum-error"
                                     required> <!--Bron minimale datum: https://www.belastingdienst.nl/wps/wcm/connect/nl/erfbelasting/content/wanneer-moet-mijn-aangifte-erfbelasting-binnen-zijn-->
                                 
-                                <p class="error-message"></p>                                                                                   
+                                <p id="overlijdensdatum-error" class="error-message" aria-live="polite"></p>                                                                                  
                             </label>
                         </fieldset>
 
@@ -95,6 +101,7 @@
                                         type="radio" 
                                         value="ja" 
                                         name="getrouwd" 
+                                        aria-describedby="getrouwd-error"
                                         required>
                                 </label>
 
@@ -102,11 +109,12 @@
                                     <input
                                         type="radio" 
                                         value="nee" 
-                                        name="getrouwd" 
+                                        name="getrouwd"
+                                        aria-describedby="getrouwd-error" 
                                         required>
                                 </label> 
 
-                                <p class="error-message"></p> 
+                                <p id="getrouwd-error" class="error-message" aria-live="polite"></p>
                             </fieldset>                                                        
                         </fieldset>
 
@@ -119,6 +127,7 @@
                                         type="radio" 
                                         value="ja" 
                                         name="geregistreerd-partnerschap" 
+                                        aria-describedby="geregistreerd-partnerschap-error"
                                         required>
                                 </label>
 
@@ -127,10 +136,11 @@
                                         type="radio" 
                                         value="nee" 
                                         name="geregistreerd-partnerschap"
+                                        aria-describedby="geregistreerd-partnerschap-error"
                                         required>
                                 </label>
 
-                                <p class="error-message"></p>                                                          
+                                <p id="geregistreerd-partnerschap-error" class="error-message" aria-live="polite"></p>                                                         
                             </fieldset>
 
                             <div class="klaptopen">
@@ -139,10 +149,11 @@
                                         type="file" 
                                         value="ja" 
                                         name="akte" 
+                                        aria-describedby="akte-help"
                                         accept=".pdf"
                                         required>
 
-                                        <p class="help-text">Stuur een kopie van de akte mee met de aangifte</p>
+                                        <p id="akte-help" class="help-text">Stuur een kopie van de akte mee met de aangifte</p>
                                 </label>
 
                                 <fieldset class="radio volgende-vraag">
@@ -152,7 +163,8 @@
                                         <input 
                                             type="radio" 
                                             value="ja" 
-                                            name="finaal-verrekenbeding" 
+                                            name="finaal-verrekenbeding"
+                                            aria-describedby="finaal-verrekenbeding-error" 
                                             required>
                                     </label>
 
@@ -160,11 +172,12 @@
                                         <input 
                                             type="radio" 
                                             value="nee" 
-                                            name="finaal-verrekenbeding" 
+                                            name="finaal-verrekenbeding"
+                                            aria-describedby="finaal-verrekenbeding-error" 
                                             required>
                                     </label>
 
-                                    <p class="error-message"></p>                                                          
+                                    <p id="finaal-verrekenbeding-error" class="error-message" aria-live="polite"></p>                                                         
                                 </fieldset>
 
                                 <fieldset class="volgende-vraag">
@@ -174,9 +187,10 @@
                                             name="overlijdensdatum" 
                                             min="2024-07-20" 
                                             max="2026-03-20" 
+                                            aria-describedby="overlijdensdatum2-error"
                                             required> 
                                             
-                                        <p class="error-message"></p>                                                                                   
+                                        <p id="overlijdensdatum2-error" class="error-message" aria-live="polite"></p>                                                                                  
                                     </label>
                                 </fieldset>
                             </div>
@@ -193,6 +207,7 @@
                                         type="radio" 
                                         value="ja" 
                                         name="kinderen" 
+                                        aria-describedby="kinderen-error"
                                         required>
                                 </label> 
 
@@ -201,10 +216,11 @@
                                         type="radio" 
                                         value="nee" 
                                         name="kinderen" 
+                                        aria-describedby="kinderen-error"
                                         required>
                                 </label> 
 
-                                <p class="error-message"></p>                                                          
+                                <p id="kinderen-error" class="error-message" aria-live="polite"></p>                                                         
                             </fieldset>
 
                             <div class="klaptopen">
@@ -216,6 +232,7 @@
                                             type="radio" 
                                             value="ja" 
                                             name="kind-eerder-overleden" 
+                                            aria-describedby="kind-eerder-overleden-error"
                                             required>
                                     </label> 
 
@@ -224,10 +241,11 @@
                                             type="radio" 
                                             value="nee" 
                                             name="kind-eerder-overleden" 
+                                            aria-describedby="kind-eerder-overleden-error"
                                             required>
                                     </label> 
 
-                                    <p class="error-message"></p>                                                          
+                                    <p id="kind-eerder-overleden-error" class="error-message" aria-live="polite"></p>                                                         
                                 </fieldset>
 
                                 <div class="klaptopen">
@@ -239,6 +257,7 @@
                                                 type="radio" 
                                                 value="ja" 
                                                 name="overleden-kind-zelf-kinderen" 
+                                                aria-describedby="overleden-kind-zelf-kinderen-error"
                                                 required>
                                         </label> 
 
@@ -247,10 +266,11 @@
                                                 type="radio" 
                                                 value="nee" 
                                                 name="overleden-kind-zelf-kinderen" 
+                                                aria-describedby="overleden-kind-zelf-kinderen-error"
                                                 required>
                                         </label>
 
-                                        <p class="error-message"></p>                                                          
+                                        <p id="overleden-kind-zelf-kinderen-error" class="error-message" aria-live="polite"></p>                                                         
                                     </fieldset>
                                 </div>
                             </div>
@@ -267,6 +287,7 @@
                                         type="radio" 
                                         value="ja" 
                                         name="testament" 
+                                        aria-describedby="testament-error"
                                         required>
                                 </label> 
 
@@ -275,10 +296,11 @@
                                         type="radio" 
                                         value="nee" 
                                         name="testament" 
+                                        aria-describedby="testament-error"
                                         required>
                                 </label> 
 
-                                <p class="error-message"></p>                                                          
+                                <p id="testament-error" class="error-message" aria-live="polite"></p>                                                         
                             </fieldset>
 
                             <div class="klaptopen"> <!--1e-->
@@ -286,40 +308,46 @@
                                     <legend>Protocolnummer notaris</legend>
 
                                     <input 
-                                        type="number" 
+                                        type="text" 
+                                        inputmode="numeric"
                                         minlength="6" 
-                                        maxlength="6" 
-                                        name="protocolnummer-notaris">
+                                        maxlength="6"
+                                        name="protocolnummer-notaris"
+                                        required>
 
                                     <label>Voorletter(s)
                                         <input 
                                             type="text" 
-                                            name="naam" 
+                                            name="voorletters2" 
+                                            utocomplete="given-name"
                                             pattern="[A-Z.]+" 
                                             placeholder=" "
+                                            aria-describedby="voorletters2-error"
                                             required> 
 
-                                        <p class="error-message"></p>
-                                        <span class="checkmark">✔</span>
-                                        <span class="error-icon">!</span>                                                        
+                                        <p id="voorletters2-error" class="error-message" aria-live="polite"></p>
+                                        <span class="checkmark" aria-hidden="true">✔</span>
+                                        <span class="error-icon" aria-hidden="true">!</span>                                                        
                                     </label>
 
                                     <label>Tussenvoegsel(s)
                                         <input 
                                             type="text"
-                                            name="naam">
+                                            name="tussenvoegsel2">
                                     </label>
 
                                     <label>Achternaam
                                         <input 
                                             type="text" 
-                                            name="naam" 
+                                            name="achternaam2" 
+                                            autocomplete="family-name"
                                             placeholder=" "
+                                            aria-describedby="achternaam2-error"
                                             required>
 
-                                        <p class="error-message"></p>
-                                        <span class="checkmark">✔</span>
-                                        <span class="error-icon">!</span>                                                     
+                                        <p id="achternaam2-error" class="error-message" aria-live="polite"></p>
+                                        <span class="checkmark" aria-hidden="true">✔</span>
+                                        <span class="error-icon" aria-hidden="true">!</span>                                                     
                                     </label>
 
                                     <label>Vestigingsplaats
@@ -327,11 +355,12 @@
                                             type="text" 
                                             name="naam" 
                                             placeholder=" "
+                                            aria-describedby="vestigingsplaats-error"
                                             required>
 
-                                        <p class="error-message"></p>
-                                        <span class="checkmark">✔</span>
-                                        <span class="error-icon">!</span>                                                          
+                                        <p id="vestigingsplaats-error" class="error-message" aria-live="polite"></p>
+                                        <span class="checkmark" aria-hidden="true">✔</span>
+                                        <span class="error-icon" aria-hidden="true">!</span>                                                          
                                     </label>
 
                                     <label>Datum van het testament of van de laatste wijziging
@@ -340,9 +369,10 @@
                                             name="testament-laatste-wijziging"
                                             min="2024-07-16" 
                                             max="2026-03-03" 
+                                            aria-describedby="testament2-error"
                                             required>
 
-                                        <p class="error-message"></p>
+                                        <p id="testament2-error" class="error-message" aria-live="polite"></p>
                                     </label>
 
                                     <label>BSN
@@ -350,13 +380,14 @@
                                             type="text" 
                                             pattern="\d{9}" 
                                             maxlength="9" 
+                                            aria-describedby="bsn-help bsn-error"
                                             placeholder=" "
                                             required>
 
-                                        <p class="help-text">Vul 9 cijfers in, zonder spaties of punten.</p>
-                                        <p class="error-message"></p>
-                                        <span class="checkmark">✔</span>
-                                        <span class="error-icon">!</span>                             
+                                        <p id="bsn-error" class="help-text">Vul 9 cijfers in, zonder spaties of punten.</p>
+                                        <p class="error-message" aria-live="polite"></p>
+                                        <span class="checkmark" aria-hidden="true">✔</span>
+                                        <span class="error-icon" aria-hidden="true">!</span>                             
                                     </label>
                                 </fieldset>
                             </div>
@@ -365,7 +396,7 @@
                         <fieldset> <!--2-->
                             <legend class="legend-titel">Gemachtigde</legend>
 
-                            <p class="instructie">
+                            <p>
                                 Vul de gegevens van de gemachtigde in. De gemachtigde is degene die namens 1 of meerdere personen en/of instellingen aangifte doet.
                             </p>
 
@@ -433,32 +464,36 @@
                                     <label>Voorletter(s)
                                         <input 
                                             type="text" 
-                                            name="naam" 
+                                            name="voorletters3" 
+                                            autocomplete="given-name"
                                             pattern="[A-Za-z.]+" 
                                             placeholder=" "
+                                            aria-describedby="voorletters3-error"
                                             required> <!--Bron pattern: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/pattern -->
 
-                                        <p class="error-message"></p>
-                                        <span class="checkmark">✔</span>
-                                        <span class="error-icon">!</span>
+                                        <p id="voorletters3-error" class="error-message" aria-live="polite"></p>
+                                        <span class="checkmark" aria-hidden="true">✔</span>
+                                        <span class="error-icon" aria-hidden="true">!</span>
                                     </label>
 
                                     <label>Tussenvoegsel(s)
                                         <input 
                                             type="text"
-                                            name="naam">
+                                            name="tussenvoegsel3">
                                     </label>
 
                                     <label>Achternaam
                                         <input 
                                             type="text" 
-                                            name="naam" 
+                                            name="achternaam3" 
+                                            autocomplete="family-name"
                                             placeholder=" "
+                                            aria-describedby="achternaam3-error"
                                             required>
 
-                                        <p class="error-message"></p>  
-                                        <span class="checkmark">✔</span> 
-                                        <span class="error-icon">!</span>                             
+                                        <p id="achternaam3-error" class="error-message" aria-live="polite"></p> 
+                                        <span class="checkmark" aria-hidden="true">✔</span> 
+                                        <span class="error-icon" aria-hidden="true">!</span>                             
                                     </label>
                                 </fieldset>
 
@@ -472,11 +507,12 @@
                                             type="text" 
                                             name="naam" 
                                             placeholder=" "
+                                            aria-describedby="notariskantoor-error"
                                             required>
 
-                                        <p class="error-message"></p>  
-                                        <span class="checkmark">✔</span> 
-                                        <span class="error-icon">!</span>                             
+                                        <p id="notariskantoor-error" class="error-message" aria-live="polite"></p> 
+                                        <span class="checkmark" aria-hidden="true">✔</span> 
+                                        <span class="error-icon" aria-hidden="true">!</span>                             
                                     </label>
                                 </fieldset>
 
@@ -491,6 +527,7 @@
                                                 type="radio" 
                                                 value="nederland" 
                                                 name="adres-land" 
+                                                aria-describedby="adres-error"
                                                 required>
                                         </label> 
 
@@ -499,10 +536,11 @@
                                                 type="radio" 
                                                 value="buitenland" 
                                                 name="adres-land" 
+                                                aria-describedby="adres-error"
                                                 required>
                                         </label>
 
-                                        <p class="error-message"></p>  
+                                        <p id="adres-error" class="error-message" aria-live="polite"></p> 
                                     </fieldset>
 
                                     <fieldset id="adres-nederland">
@@ -513,31 +551,35 @@
                                                 type="text"
                                                 name="straat"
                                                 placeholder=" "
+                                                aria-describedby="straat-nederland-error"
                                                 required>
 
-                                            <p class="error-message"></p>  
-                                            <span class="checkmark">✔</span> 
-                                            <span class="error-icon">!</span>   
+                                            <p id="straat-nederland-error" class="error-message" aria-live="polite"></p> 
+                                            <span class="checkmark" aria-hidden="true">✔</span> 
+                                            <span class="error-icon" aria-hidden="true">!</span>   
                                         </label>
 
                                         <label>Huisnummer
                                             <input
-                                                type="number"
+                                                type="text"
+                                                inputmode="numeric"
                                                 name="huisnummer"
                                                 placeholder=" "
+                                                aria-describedby="huisnummer-nederland-error"
                                                 required>
 
-                                            <p class="error-message"></p>  
-                                            <span class="checkmark">✔</span> 
-                                            <span class="error-icon">!</span>   
+                                            <p id="huisnummer-nederland-error"class="error-message" aria-live="polite"></p> 
+                                            <span class="checkmark" aria-hidden="true">✔</span> 
+                                            <span class="error-icon" aria-hidden="true">!</span>   
                                         </label>
 
                                         <label>Toevoeging
                                             <input
-                                                type="number"
+                                                type="text"
+                                                inputmode="numeric"
                                                 name="toevoeging-huisnummer">
 
-                                            <p class="error-message"></p>  
+                                            <p class="error-message" aria-live="polite"></p> 
                                         </label>
 
                                         <label>Postcode
@@ -545,11 +587,12 @@
                                                 type="text"
                                                 name="postcode"
                                                 placeholder=" "
+                                                aria-describedby="postcode-nederland-error"
                                                 required>
 
-                                            <p class="error-message"></p>  
-                                            <span class="checkmark">✔</span> 
-                                            <span class="error-icon">!</span>   
+                                            <p id="postcode-nederland-error" class="error-message" aria-live="polite"></p> 
+                                            <span class="checkmark" aria-hidden="true">✔</span> 
+                                            <span class="error-icon" aria-hidden="true">!</span>   
                                         </label>
 
                                         <label>Woonplaats
@@ -557,11 +600,12 @@
                                                 type="text"
                                                 name="woonplaats"
                                                 placeholder=" "
+                                                aria-describedby="woonplaats-nederland-error"
                                                 required>
 
-                                            <p class="error-message"></p>  
-                                            <span class="checkmark">✔</span> 
-                                            <span class="error-icon">!</span>   
+                                            <p id="woonplaats-nederland-error" class="error-message" aria-live="polite"></p> 
+                                            <span class="checkmark" aria-hidden="true">✔</span> 
+                                            <span class="error-icon" aria-hidden="true">!</span>   
                                         </label>
                                     </fieldset>
 
@@ -573,31 +617,35 @@
                                                 type="text"
                                                 name="straat"
                                                 placeholder=" "
+                                                aria-describedby="straat-buitenland-error"
                                                 required>
 
-                                            <p class="error-message"></p>  
-                                            <span class="checkmark">✔</span> 
-                                            <span class="error-icon">!</span>   
+                                            <p  id="straat-buitenland-error" class="error-message" aria-live="polite"></p> 
+                                            <span class="checkmark" aria-hidden="true">✔</span> 
+                                            <span class="error-icon" aria-hidden="true">!</span>   
                                         </label>
 
                                         <label>Huisnummer
                                             <input
-                                                type="number"
+                                                type="text"
+                                                inputmode="numeric"
                                                 name="huisnummer"
                                                 placeholder=" "
+                                                aria-describedby="huisnummer-buitenland-error"
                                                 required>
 
-                                            <p class="error-message"></p>  
-                                            <span class="checkmark">✔</span> 
-                                            <span class="error-icon">!</span>   
+                                            <p id="huisnummer-buitenland-error" class="error-message" aria-live="polite"></p> 
+                                            <span class="checkmark" aria-hidden="true">✔</span> 
+                                            <span class="error-icon" aria-hidden="true">!</span>   
                                         </label>
 
                                         <label>Toevoeging
                                             <input
-                                                type="number"
+                                                type="text"
+                                                inputmode="numeric"
                                                 name="toevoeging-huisnummer">
 
-                                            <p class="error-message"></p>  
+                                            <p class="error-message" aria-live="polite"></p> 
                                         </label>
 
                                         <label>Postcode
@@ -605,11 +653,12 @@
                                                 type="text"
                                                 name="postcode"
                                                 placeholder=" "
+                                                aria-describedby="postcode-buitenland-error"
                                                 required>
 
-                                            <p class="error-message"></p>  
-                                            <span class="checkmark">✔</span> 
-                                            <span class="error-icon">!</span>   
+                                            <p id="postcode-buitenland-error"class="error-message" aria-live="polite"></p> 
+                                            <span class="checkmark" aria-hidden="true">✔</span> 
+                                            <span class="error-icon" aria-hidden="true">!</span>   
                                         </label>
 
                                         <label>Woonplaats
@@ -617,20 +666,22 @@
                                                 type="text"
                                                 name="woonplaats"
                                                 placeholder=" "
+                                                aria-describedby="woonplaats-buitenland-error"
                                                 required>
 
-                                            <p class="error-message"></p>  
-                                            <span class="checkmark">✔</span> 
-                                            <span class="error-icon">!</span>   
+                                            <p id="woonplaats-buitenland-error"class="error-message" aria-live="polite"></p> 
+                                            <span class="checkmark" aria-hidden="true">✔</span> 
+                                            <span class="error-icon" aria-hidden="true">!</span>   
                                         </label>
 
                                         <label>Landcode
                                             <input
-                                                type="list"
+                                                type="text"
                                                 list="landen"
                                                 name="land-keuze"
+                                                aria-describedby="landcode-buitenland-error"
                                                 required>
-                                      
+
                                             <datalist id="landen">
                                                 <option value="AFG"> Afghanistan</option>
                                                 <option value="ALA"> Åland</option>
@@ -882,29 +933,27 @@
                                                 <option value="CHE"> Zwitserland</option>
                                             </datalist>
 
-                                            <p class="error-message"></p>
+                                            <p id="landcode-buitenland-error" class="error-message" aria-live="polite"></p>
                                         </label>
                                     </fieldset>
 
                                     <fieldset>
                                         <legend>Contactgegevens</legend>
 
-                                        <p class="instructie">Het invullen van een telefoonnummer of e-mailadres is niet verplicht, maar wel handig. Dan kunnen wij u makkelijker vragen stellen of uitleg geven.</p>
+                                        <p>Het invullen van een telefoonnummer of e-mailadres is niet verplicht, maar wel handig. Dan kunnen wij u makkelijker vragen stellen of uitleg geven.</p>
 
                                         <label>Telefoonummer
                                             <input
-                                                type="number"
+                                                type="tel"
+                                                inputmode="numeric"
                                                 name="telefoonnummer">
-                                            
-                                            <p class="error-message"></p>  
                                         </label>
 
                                         <label>E-mailadres
                                             <input
                                                 type="e-mail"
-                                                name="e-mailadres">
-                                            
-                                            <p class="error-message"></p>  
+                                                name="e-mailadres"
+                                                autocomplete="email">
                                         </label>
                                     </fieldset>
                                 </fieldset>
