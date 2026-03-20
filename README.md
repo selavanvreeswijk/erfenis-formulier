@@ -10,8 +10,6 @@ DIT IS EEN STUDIE PROJECT
 ### Maandag
 Vanochtend en in een deel van de middag heb ik uitleg gekregen over deze nieuwe opdracht. Dit duurde ongeveer twee uur. Hierna ben ik aan de slag gegaan met het eerste deel van het formulier maken. Dit is gelukt, onderstaand te zien in de screenshot en ik deed er twee uur over. Ik heb veel geleerd over input-velden, legends, patterns en ga zo maar door. Morgen wil ik aan de slag gaan met de tweede pagina van het erfenis formulier en wat ik nu heb optimaliseren.
 
-![screenshot huidig werk](/images/prototype-1.png)
-
 ### Dinsdag
 Dinsdagochtend ben ik begonnen met een quiz over een artikel dat we hadden gelezen. Daarna had ik een workshop over HTML en daarna ben ik helaas ziek naar huis gegaan met koorts. Ik heb verder niet aan de opdracht kunnen werken omdat ik me niet goed voelde.
 
@@ -25,7 +23,9 @@ Hier was ik ziek.
 Vandaag heb ik het voorgangsgesprek gevolgd. Ik heb feedback gekregen over dingen als een inputveld in een label zetten en ook te beginnen met de styling van mijn formulier. Ook werkte mijn minlength & max length niet, net zoals mijn datumprikker wanneer ik daar waarden aan gaf. Hier wil ik in de vakantie nog even aan zitten, om ook niet achter te lopen. 
 
 ### Weekverslag week 3
-Deze week is Browser Technologies begonnen. Ik heb gelukkig het begin meegemaakt waarin ik de eerste pagina van mijn formulier heb opgesteld, en werd daarna helaas ziek. Hierdoor heb ik niet meer verder kunnen werken. Ik wil hier in de vakantie iets van inhalen en daarna er weer lekker mee aan de slag gaan!
+Deze week is Browser Technologies begonnen. Ik heb gelukkig het begin meegemaakt waarin ik de eerste pagina van mijn formulier heb opgesteld, en werd daarna helaas ziek. Hierdoor heb ik niet meer verder kunnen werken. Ik wil hier in de vakantie iets van inhalen en daarna er weer mee aan de slag gaan!
+
+![screenshot huidig werk](/images/prototype-1.png)
 
 </details>
 
@@ -36,19 +36,18 @@ Deze week is Browser Technologies begonnen. Ik heb gelukkig het begin meegemaakt
 ### Maandag
 Ik heb geprobeerd om er in de vakantie aan te zitten maar ik was de hele vakantie super moe, ik denk nog van ziek zijn. Vandaag ben ik de dag begonnen met een workshop van Victor over de validatie van formulieren, die duurde ongeveer een uur. Daarna ben ik begonnen aan de styling van mijn formulier. Ik denk dat ik hier drie uur mee bezig ben geweest. Dit ging niet soepel en ik had moeite om mijn focus hier te houden. Ik denk dat ik nog even moet inkomen na de vakantie. Daarna heb ik de artikelen gelezen voor de Weekly Geek van morgenochtend. Morgen wil ik de styling finaliseren en beginnen met mijn eerste pattern. 
 
-![screenshot huidig werk](/images/prototype-2.png)
-![screenshot huidig werk](/images/prototype-4.png)
-
 ### Dinsdag
-Ik ben de dag begonnen met de weekly geek. Hier heb ik met mijn groepje gepraat over mijn voorgekozen onderwerp: radio buttons en checkboxes. Hierna heb ik een uur gewerkt aan de styling van mijn formulier en daarna ben ik op te trein gestapt. Hier heb ik ongeveer drie uur gewerkt aan de styling en feedback van elementen wanneer een gebruiker wel/ niet het formulier invult. Ik heb ook mijn code opgeschoond met wat kleine aanpassingen als de bsn validatie werkend maken evenals de datumprikker. 
-
-![screenshot huidig werk](/images/prototype-3.png)
+Ik ben de dag begonnen met de weekly geek. Hier heb ik met mijn groepje gepraat over mijn voorgekozen onderwerp: radio buttons en checkboxes. Hierna heb ik een uur gewerkt aan de styling van mijn formulier en daarna ben ik op te trein gestapt om naar mijn oma te gaan. Hier heb ik ongeveer drie uur gewerkt aan de styling en feedback van elementen wanneer een gebruiker wel/ niet het formulier invult. Ik heb ook mijn code opgeschoond met wat kleine aanpassingen als de bsn validatie werkend maken evenals de datumprikker. 
 
 ### Vrijdag
-Vandaag had ik het voortgansgesprek. Hier kreeg ik als feedback dat ik mijn positieve feedback beter mag stylen. Ik heb nu namelijk alleen dat de border van het inputveld groen wordt maar Vasilis vond dat dit niet genoeg opviel. Hier wil ik volgende week meer mee aan de slag. Verder kwam er ook uit het voortgangsgesprek dat het een pattern kan zijn dat ik bovenin een progressiebar maak voor de gebruiker. Dit zal nog wat werk zijn om het uit te vogelen.
+Vandaag had ik het voortgansgesprek. Hier kreeg ik als feedback dat ik mijn positieve validatie/ feedback duidelijker mag tonen. Ik heb nu namelijk alleen dat de border van het inputveld groen wordt maar dit valt niet genoeg op. Hier wil ik volgende week meer mee aan de slag. Verder kwam er ook uit het voortgangsgesprek dat het een pattern kan zijn dat ik bovenin een progressiebar maak voor de gebruiker. Dit zal nog wat werk zijn om het uit te vogelen.
 
 ### Weekverslag week 5
-Na een week vakantie gehad te hebben was ik bang dat ik heel erg achterliep maar uiteindelijk viel dit best mee. Ik heb hard gewerkt maandag en dinsdag om dit in te halen. Ik ben blij met het werk dat ik heb gedaan: een begin aan de styling, validatie van het formulier en een idee wat ik als patterns ga doen. 
+Na een week vakantie gehad te hebben was ik bang dat ik heel erg achterliep maar uiteindelijk viel dit best mee. Ik heb hard gewerkt maandag en dinsdag om dit in te halen. Ik ben blij met het werk dat ik heb gedaan: een begin aan de styling, validatie van het formulier en een idee wat ik als patterns ga doen. De styling duurde wat langer dan ik dacht en ik kom er steeds meer en meer achter dat er veel meer bij een formulier komt kijken dan ik had verwacht. De workshops zijn interessant en ik kan er dingen uit halen voor mijn eigen project, bijvoorbeeld de validatie. 
+
+![screenshot huidig werk](/images/prototype-2.png)
+![screenshot huidig werk](/images/prototype-4.png)
+![screenshot huidig werk](/images/prototype-3.png)
 
 </details>
 
@@ -57,62 +56,88 @@ Na een week vakantie gehad te hebben was ik bang dat ik heel erg achterliep maar
 ## Week 6
 
 ### Maandag
-Vandaag zijn we de dag begonnen met een gastcollege van Rijk van Zanten. Hieruit heb ik vooral opgestoken dat het veel werk is om naar Amerika te emigreren of je eigen bedrijf te beginnen. Wel gaaf wat hij allemaal heeft opgezet en dat hij er zo voor gaat. Daarna heb ik een workshop van Victor gehad over accessibility en heb ik geleerd over dingen als aria-describeby. Dit duurde ongeveer een uur. Hierna ben ik de rest van de middag mijn styling gaan finaliseren, mijn validatie optimaliseren en als afsluiter heb ik gewerkt aan het laten inklappen van bepaalde vragen wanneer de gebruiker op 'nee' drukt. 
+Vandaag zijn we de dag begonnen met een gastcollege van Rijk van Zanten. Hieruit heb ik vooral opgestoken dat het veel werk is om naar Amerika te emigreren of je eigen bedrijf te beginnen. Wel gaaf wat hij allemaal heeft opgezet en dat hij er zo voor gaat. Daarna heb ik een workshop van Viktor gehad over accessibility en heb ik geleerd over dingen als aria-describeby. Dit duurde ongeveer een uur. Hierna ben ik de rest van de middag mijn styling gaan finaliseren, mijn validatie optimaliseren en als afsluiter heb ik gewerkt aan het laten inklappen van bepaalde vragen wanneer de gebruiker op 'nee' drukt. 
 
 Als afsluiter van de dag heb ik de video voor morgenochtend bekeken. Mijn mening: tijden veranderen. Iedereen heeft vanaf een jonge leeftijd al veel formulieren of andere webapplicaties gebruikt en is toe aan bijvoorbeeld maar 1 border bottom. Dingen mogen er ook ethetisch uitzien en hoeven niet voor altijd er oud uit te zien. Ben het er wel mee eens dat de legend  tekst in de border heel lelijk is.
 
 Morgen wil ik aan de slag met een planning maken van alles wat ik nog wil doen voor de deadline, beginnen met responsiveness en beginnen aan het idee van meerdere pagina's hebben. Als er nog tijd over is zou ik ook willen beginnen met de progressiebar. 
 
-![screenshot huidig werk](/images/prototype-5.png)
-![screenshot huidig werk](/images/prototype-6.png)
-
 ### Dinsdag
 Vandaag zijn we de dag begonnen met de Weekly Geek. Hierna ben ik aan de slag gegaan met responsiveness, een planning maken en vraag twee van het formulier implementeren in mijn html. Dit duurde vrij lang en ben ik ook nog niet klaar mee. Volgende week (maar eigenlijk het liefst dit weekend) wil ik aan de slag met alle html-content verder invullen, werken aan het switchen tussen pagina's, de progressiebar en het adres in NL of het buitenland uitwerken.
 
 ### Vrijdag
-Voortgangsgesprek feedback
-- Landcodes met datalist 
+Vandaag heb ik een voortgangsgesprek gehad. De feedback die hieruit kwam is als volgt: 
+- Landcodes met datalist implementeren
 - Animatie/ transitie op het inklappen van de vragen wanneer mensen 'nee' invullen
 - Reflectie op proces vóór deadline schrijven
 
 ### Weekverslag week 6
-...
+Deze week heb ik veel stappen gemaakt. Ik ben begonnen met mijn website responsive maken, de styling en ik kwam er ook achter dat ik nog maar 1 pagina aan html-content had dus ben ik de tweede pagina erin gaan zetten. Dat duurde iets langer dan verwacht en kwamen ook weer meer dingen bij kijken als keuze tussen wonen in Nederland of het Buitenland en een keuze maken tussen bsn/rsin, protocolnummer og beconnummer. Deze patterns wil ik volgende week gaan uitwerken, net als kijken hoe ik de landcodes op een correcte UX-manier kan intergeren. Ik vind het interessanter dan verwacht om zoveel over formulieren te leren, over de validatie en toegankelijkheid. 
+
+![screenshot huidig werk](/images/prototype-5.png)
+![screenshot huidig werk](/images/prototype-6.png)
 
 </details>
 
-<details><summary>Week 5</summary>
+<details><summary>Week 7</summary>
 
-## Week 6
+## Week 7
 
 ### Maandag
 Dit heb ik vandaag gedaan:
-- Landcodes met datalist gedaan
+- Landcodes met datalist geïntegreerd
 - Gekeken naar de helpteksten van de gebruiker (voor bijvoorbeeld het uploaden van de akte)
 - Buitenland of NL adres keuze
 - Paar algemene classes weggehaald die weg konden
-- Animatie overgang met JavaScript begonnen
+- Animatie overgang met JavaScript begonnen met scrollIntoView en startViewTransition in JavaScript
 
-Hier ben ik de hele dag mee bezig geweest. Met de animatie overgang een paar uur totdat ik er genoeg van had en toen ben ik iets anders gaan doen. Dat wil ik morgen gaan vragen.
+Hier ben ik de hele dag mee bezig geweest. Met de animatie overgang een paar uur totdat ik er genoeg van had en toen ben ik iets anders gaan doen. Dat wil ik morgen gaan navragen.
 
 ### Dinsdag
-Vandaag heb ik het BSIN of RSIN kiezen verder uitgewerkt, evenals mijn css beter structureren, de animatie van op vragen klikken werkend maken en display: none op radio buttons weggehaald voor het formulier gebruiken met tab en mijn bronnen alvast goed vermeld. Hier allemaal ben ik de gehele ochtend mee bezig geweest. 
+Vandaag heb ik het BSIN of RSIN kiezen verder uitgewerkt, evenals mijn css beter structureren, de animatie van op vragen klikken werkend maken en display: none op radio buttons weggehaald voor het formulier gebruiken met tab en mijn bronnen alvast goed vermeld. Hier allemaal ben ik de gehele ochtend mee bezig geweest.
+
+### Donderdag
+Dinsdagmiddag, gisteren en het grootste gedeelte van vandaag heb ik me vooral met CSS beziggehouden omdat die deadline vandaag om 18:00 was. Vandaag heb ik gewerkt aan wat padding en margins die elkaar overschreven, de focus: state voor alle labels wanneer de gebruiker daarop focust met tab, aria-hidden & aria-live & aria-describeby toepassen op html en nog een paar andere dingen. 
 
 ### Vrijdag
+Vandaag is het eindgesprek.
 
+### Weekverslag week 7 & reflectie op proces
+Voor mijn idee zijn deze weken voorbij gevlogen. Toen ik initieel hoorde over het onderwerp een formulier maken (en dan wel een erfenis formulier met de styling van de NS) was ik niet ronduit enthousiast - maar ik vond het uiteindelijk leuker dan verwacht. Ik vind dat mijn eindresultaat er mooi uitziet maar ook goed werkt voor de gebruiker. 
 
-### Weekverslag week 6
-...
+Het voelt ergens onaf voor me om maar één pagina te hebben met niet het gehele of niet een uitgebreider formulier maar alle 42 pagina's integreren was een beetje te veel. Ik had verder ook zelf niet verwacht dat er zoveel bij een formulier kwam kijken. Dingen als toegankelijkheid wanneer iemand alleen tab gebruikt, landcodes met een datalist maar ook hoe veel moeite het was om een animatie/ transitie te maken voor het klikken op een radio button en dat er dan iets 'verschijnt'. Hier liep ik echt even tegenaan maar kon ik gelukking hulp bij krijgen. Ik heb hiervoor zelfs de flow van mijn formulier moeten aangepast: ik had eerst dat de gebruiker op de knop 'nee' klikt en er vervolgens dingen inklappen, maar dat werkte niet goed met de functies startViewTransition en ScrollIntoView dus heb ik het moeten omgooien naar dat er dingen uitklappen wanneer de gebruiker op 'ja' klikt. Ook heb ik veel geleerd over validatie. De kern is hoe belangrijk het is deze op een juiste manier toe te kunnen passen en ik ben blij dat dit uiteindelijk met JavaScript is gelukt. 
+
+Wat ik verder had willen onderzoeken was het maken van een beginscherm, eindscherm, meerdere pagina's en daarbij een progressiebar. Dit had me heel interessant geleken om de gebruiker een meer completere ervaring te geven en ook dat meer te onderzoeken. Nu heb ik me vooral bij de kern van het formulier gehouden. 
+
+Al met al vond ik het een interessant project en heb ik heel veel geleerd. 
+
+![screenshot huidig werk](/images/final1.png)
+![screenshot huidig werk](/images/final2.png)
+![screenshot huidig werk](/images/final3.png)
+![screenshot huidig werk](/images/final4.png)
+![screenshot huidig werk](/images/final5.png)
+![screenshot huidig werk](/images/final6.png)
 
 </details>
 
 <details><summary>Bronnenlijst</summary>
 
 ## Bronnen
-Pattern: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/pattern
 
-Minimale datum: https://www.belastingdienst.nl/wps/wcm/connect/nl/erfbelasting/content/wanneer-moet-mijn-aangifte-erfbelasting-binnen-zijn 
+### HTML
+- Pattern: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/pattern
+- Minimale datum: https://www.belastingdienst.nl/wps/wcm/connect/nl/erfbelasting/content/wanneer-moet-mijn-aangifte-erfbelasting-binnen-zijn 
+- Aria roles: vanuit de les & https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques
 
-JavaScript functie scrollViewTransition & startViewTransition voor de animatie van het klikken op een knop heeft Viktor me mee geholpen. 
+### JavaScript 
+- Functie scrollViewTransition & startViewTransition voor de animatie van het klikken op een knop heeft Viktor me mee geholpen. Vervolgens Vasilis ook met parentNode en nextElementSibling
+- startViewTransition op deze manier uitgewerkt: https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API
+- Functie voor validation message met blur heb ik geleerd in een workshop van Viktor
+
+### CSS
+- Vasilis heeft me geholpen met -10000em en position absolute voor radio buttons zodat deze wel zichtbaar zijn voor de gebruiker. In plaats van display none
+
+Ik heb ook al mijn code nagelopen met chatGPT. Hier kwamen vooral een paar typfouten uit.
 
 </details>
 

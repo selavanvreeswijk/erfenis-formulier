@@ -33,10 +33,11 @@
                                     name="voorletters" 
                                     autocomplete="given-name"
                                     pattern="[A-Za-z.]+" 
-                                    placeholder=" "
+                                    placeholder=" " 
                                     aria-describedby="voorletter-error"
                                     required> <!--Bron pattern: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/pattern -->
 
+                                    <!--Bron aria roles: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques-->
                                 <p id="voorletter-error" class="error-message" aria-live="polite"></p>
                                 <span class="checkmark" aria-hidden="true">✔</span>
                                 <span class="error-icon" aria-hidden="true">!</span>  
@@ -469,7 +470,7 @@
                                             pattern="[A-Za-z.]+" 
                                             placeholder=" "
                                             aria-describedby="voorletters3-error"
-                                            required> <!--Bron pattern: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/pattern -->
+                                            required>
 
                                         <p id="voorletters3-error" class="error-message" aria-live="polite"></p>
                                         <span class="checkmark" aria-hidden="true">✔</span>
@@ -960,7 +961,7 @@
                             </fieldset>
                         </fieldset>
 
-                        <button type="submit">Verzenden</button>
+                        <button id="submit" type="submit">Verzenden</button>
                     </fieldset>
                 </form>
             </section>

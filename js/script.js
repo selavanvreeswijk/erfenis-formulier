@@ -1,4 +1,4 @@
-// Validatie -----------------------------------
+// Validatie --------------------------------------------------------------------------------------------------------------------------- 
 
 const inputs = document.querySelectorAll('input');
 
@@ -69,8 +69,9 @@ form.addEventListener('submit', (event) => {
   }
 });
 
-// Functie voor scroll + view transition ------------------------ 
-// Bron: met startViewTransition en ScrollIntoView heeft Viktor me geholpen
+// Functie voor scroll + view transition ---------------------------------------------------------------------------------------- 
+// Bron: met startViewTransition en ScrollIntoView heeft Viktor me geholpen. 
+// Hierna zelf met https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API uitgewerkt
 function scrollMetTransitie(element, block = "center"){
   document.startViewTransition(() =>
     element.scrollIntoView({
@@ -143,4 +144,10 @@ adresBuitenlandGeklikt.addEventListener("click", () => {
   document.startViewTransition(() => 
         adresBuitenland.scrollIntoView({behavior:"smooth", block:"center"})
     );
+});
+
+// Submit button
+
+document.getElementById("submit").addEventListener("click", () => {
+    document.body.classList.add("submitted");
 });

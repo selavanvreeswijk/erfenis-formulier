@@ -143,7 +143,8 @@ main{
 input[type="text"],
 input[type="date"],
 input[type="file"],
-input[type="e-mail"]{
+input[type="e-mail"],
+input[type="tel"]{
     color: var(--color-content-subtle);
     font-size: 16px;
     background-color: var(--color-background-input);
@@ -289,6 +290,7 @@ label input{
     font-weight: bold;
 }
 
+/* :placeholder-shown = true wanneer het inputveld leeg is en de placeholder zichtbaar is */
 input:valid:not(:placeholder-shown) ~ .checkmark,
 input:valid:not(:placeholder-shown) ~ .checkmark2{
     display: block;
@@ -299,6 +301,8 @@ input:invalid:not(:placeholder-shown) ~ .error-icon2{
     display: flex;
 }
 
+/* Toon foutmelding wanneer input ongeldig is en niet leeg */
+/* Bron: MDN Web Docs – :invalid + :placeholder-shown */
 input:invalid:not(:placeholder-shown) ~ .error-message{
     display: block;
 }
@@ -306,6 +310,30 @@ input:invalid:not(:placeholder-shown) ~ .error-message{
 input:focus-visible{
     outline: 2px solid var(--color-content-emphasis);
     outline-offset: 2px;
+}
+
+/* Formulier versturen */
+body.submitted main{
+    opacity: 0.4;
+    filter: blur(2px);
+    pointer-events: none;
+}
+
+body.submitted::after{
+    content: "Het formulier is succesvol verstuurd";
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+
+    opacity: 0;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn{
+    to{
+        opacity: 1;
+    }
 }
 
 /* --------------------------------------------------------------------------------- MARK: OPENKLAPPEN & TRANSITIE 
